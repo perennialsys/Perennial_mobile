@@ -1,0 +1,143 @@
+ <script type="text/javascript">
+ showMsg();
+    	$(document).ready(function(){
+			showMsg();
+		});
+		function closeBtn(){
+			$('#help-overlay').slideUp();			
+		}
+		function showMsg(){
+		
+			var msg = document.getElementById('help-overlay');	
+			msg.style.display = 'block';
+		}
+    </script>
+<div class="help-overlay container-fluid" id="help-overlay">
+<div id="closeBtn" onClick="closeBtn()">X</div>
+	<div class="row overlay-message" >
+		<h4 class="col-sm-4">Thanks for downloading the Fantasy Coaching Staff app</h4>
+        
+        <p class="col-sm-82" style="margin-top: 37px;">We've given you <strong>one free text</strong> to ask one of our experts a quick question.</p>
+        <p class="col-sm-82s">But - to get the most complete and in-depth answers to win each week - check out the live message and phone options. Expert coaches and former players are  standing by to give you advice for your team NOW!  </p>
+        <div class="col-xs-12"> 
+        	<div class="get-started-btn">
+		        <input name="Get Started!" type="submit" class="get-btn" value="Get Started!"> 
+            </div>
+        </div> <!-- col-xs-12 end -->
+	</div>
+</div> <!-- help container end -->
+
+	<!-- main container of all the page elements -->
+	<div id="wrapper" class="bg-blue">
+		<!-- contain main informative part of the site -->
+		<div id="main">
+			<!-- page logo -->
+			<strong class="logo"><a href="#">FANTASY COACHING STAFF</a></strong>
+			<!-- welcome area area -->
+			<section class="welcome-area">
+				<a href="#" class="btn">Choose a Sport</a>
+				<ul>
+					<li>
+						<a href="#">
+							<div class="img-holder">
+								<span data-picture data-alt="image description" class="normal">
+									<span data-src="images/icon1.png" ></span>
+									<span data-src="images/icon1-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/icon1.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/icon1.png" alt="image description"></noscript>
+								</span>
+								<span data-picture data-alt="image description" class="hover">
+									<span data-src="images/icon1-h.png" ></span>
+									<span data-src="images/icon1-2x-h.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/icon1.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/icon1.png" alt="image description"></noscript>
+								</span>
+							</div>
+							<strong class="title">COMING SOON!</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img-holder">
+								<span data-picture data-alt="image description" class="normal">
+									<span data-src="images/icon2.png" ></span>
+									<span data-src="images/icon2-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/icon2.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/icon2.png" alt="image description"></noscript>
+								</span>
+								<span data-picture data-alt="image description" class="hover">
+									<span data-src="images/icon2-h.png" ></span>
+									<span data-src="images/icon2-2x-h.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/icon2.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/icon2.png" alt="image description"></noscript>
+								</span>
+							</div>
+							<strong class="title">COMING SOON!</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img-holder">
+								<span data-picture data-alt="image description" class="normal">
+									<span data-src="images/icon3.png" ></span>
+									<span data-src="images/icon3-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/icon3.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/icon3.png" alt="image description"></noscript>
+								</span>
+								<span data-picture data-alt="image description" class="hover">
+									<span data-src="images/icon3-h.png" ></span>
+									<span data-src="images/icon3-2x-h.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/icon3.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/icon3.png" alt="image description"></noscript>
+								</span>
+							</div>
+							<strong class="title">FOOTBALL</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="img-holder">
+								<span data-picture data-alt="image description" class="normal">
+									<span data-src="images/icon4.png" ></span>
+									<span data-src="images/icon4-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/icon4.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/icon4.png" alt="image description"></noscript>
+								</span>
+								<span data-picture data-alt="image description" class="hover">
+									<span data-src="images/icon4-h.png" ></span>
+									<span data-src="images/icon4-2x-h.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/icon4.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/icon4.png" alt="image description"></noscript>
+								</span>
+							</div>
+							<strong class="title">COMING SOON!</strong>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
