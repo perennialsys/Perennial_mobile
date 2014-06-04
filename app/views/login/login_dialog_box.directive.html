@@ -1,3 +1,76 @@
+<!--script type="text/javascript" src="bower/main.js"></script-->
+
+<script type="text/javascript">
+	//showMsg();
+    var flag=0;
+    
+	/*$(document).ready(function(){
+     showMsg();
+     });*/
+
+function closeBtn(){
+    if(flag==0)
+    {
+        flag=1;
+        $(".title").html("<span>Your Password </span><br><span> Has Been Reset</span>");
+        
+        $(".p1").html("<span>Please check your email inbox for further instructions. </span>");
+        $("#email").hide();
+        $("#resetPass").attr('value', 'Close');
+    }
+    else
+        $('#helpLogin-overlay').slideUp();
+     
+}
+
+function showMsg(){
+    var msg = document.getElementById('helpLogin-overlay');
+    msg.style.display = 'block';
+    
+    //flag=1;
+    $(".title").html("<span>Forgot Password?</span>");
+    
+    $(".p1").html("<span>Please enter the email address you used to sign up with.  We will email a link to you that will allow you to reset your password. </span>");
+    $("#resetPass").attr('value', 'Reset Password');
+    $("#email").show();
+    
+}
+
+function login(){
+    $(location).attr('href', '#/welcome/');
+}
+</script>
+
+<div class="help-overlay container-fluid" id="helpLogin-overlay" >
+	<div id="closeBtn" class="close_btn" onClick="closeBtn()"></div><!-- end close_btn -->
+	
+    <div id="mainforgot-Overlay" style="">
+        
+        <div class="overlay-message1"  style="">
+            <p class="title" style="">
+        	<span >Forgot Password?</span>
+            </p>
+            
+            <p class="p1" style="">
+	        <span style="">Please enter the email address you used to sign up with.  We will email a link to you that will allow you to reset your password. </span>
+	       
+            </p>
+            
+            <p class="p2">
+        	<span >&nbsp;</span>
+            </p>
+            
+            <div   id="email">
+            <span ><input type="email" class="form-control" id="email_id" style=""></span>
+            </div>
+            <div>
+                <div class="get-started-btn">
+                    <input name="Get Started!" onClick="closeBtn()" type="submit" class="get-btn" id="resetPass" value="Reset Password" style="">
+                </div>
+            </div> <!-- col-xs-12 end -->
+        </div>
+	</div>
+</div> <!-- help container end -->
 
 <!-- main container of all the page elements -->
 <div id="wrapper" class="bg-blue">
@@ -6,19 +79,19 @@
 		<!-- page logo -->
 		<strong class="logo"><a href="#">FANTASY COACHING STAFF</a></strong>
 		<!-- login form -->
-		<form action="#/welcome/" class="login-form">
+		<form  class="login-form">
 			<fieldset>
 				<input type="email" placeholder="Email">
 				<input type="password" placeholder="Password">
-				<input type="submit" value="Login" onClick='document.getElementById("loginoverlay").style.display="block";'>
-				<a href="#" class="forgot">Forgot Username/Password?</a>
+				<input type="submit" value="Login"  onClick="login()">
+				<a  class="forgot" onClick="showMsg()">Forgot Username/Password?</a>
 			</fieldset>
 		</form>
 		<!-- footer of the page -->
-		<div id="footer1">
+		<div id="footer">
 			<!-- for signup -->
 			<div class="signup">
-				<p>Don't have an FCS account? <a href="#/signup/">Sign-Up</a></p>
+				<p><a href="#/signup/">Don't have an FCS account? Sign-Up</a></p>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,192 @@
+	<script type="text/javascript" src="bower/jmain.js"></script>
+    <!-- main container of all the page elements -->
+	<div id="wrapper" class="archive-detailcall-page">
+		<!-- header of the page -->
+		<div ng-include="'app/views/header.html'" ></div>
+		<!-- contain main informative part of the site -->
+		<div id="main">
+			<!-- live chat -->
+			<section class="coachs live-chat">
+				<div class="author">
+					<div class="box">
+						<div class="fav active">
+							<a href="#">star</a>
+							<strong>FAV</strong>
+						</div>
+						<div class="img-holder">
+							<span picture-fill data-alt="image description">
+								<span pf-src="images/img1.jpg" ></span>
+								<span pf-src="images/img1-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+								<span pf-src="images/img1-s.jpg" data-media="(max-width:600px)" ></span>
+								<span pf-src="images/img1-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<img src="images/img1.jpg" alt="image description">
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript><img src="images/img2.jpg" alt="image description"></noscript>
+							</span>
+						</div>
+						<div class="text">
+							<strong class="title online"><a href="#">Coach John S.</a></strong>
+							<div class="star-rating">
+								<span picture-fill data-alt="image description">
+									<span pf-src="images/4star.png" ></span>
+									<span pf-src="images/4star-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<img src="images/4star.png" alt="image description">
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="images/4star.png" alt="image description"></noscript>
+								</span>
+							</div>
+							<div class="status active" style="display:none;">
+								<span class="online">ONLINE - AVAILABLE</span>
+								<span class="offline">OFFLINE</span>
+							</div>
+							<!--time datetime="2014-04-14" class="chatted">Chatted: 10/15 /14 @ 9:25am</time-->
+						</div>
+					</div>
+				</div>
+				<!-- live chat box -->
+				<div class="call-box">
+					<!--div class="time-remain">
+						<time datetime="2014-04-14">Time Remaining = <span>3:46</span></time>
+					</div-->
+					<div class="scrollable-area" style="border-left: 0px;margin-left:0px;">
+						<div class="scroll-holder">
+                            
+                            <div class="scroll-text" style="text-align:center;">
+                                <p class = "scrollable-text" style="font-weight:bold">Call Details</p>
+                                <p class = "scrollable-text" style="font-weight:bold">10/15/2014</p>
+                                <p class = "scrollable-text" style="font-weight:bold">3pm PST</p>
+                                <p class = "scrollable-text" style="font-weight:bold">Duration: 15min</p>
+                            </div>
+							<!--ul class="chat">
+								<li class="sender">
+									<time datetime="2014-04-14">10/1/14 at 4:52p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Scott Sloane</a></strong>
+										<p>Who do I start Romo or Brady?</p>
+									</div>
+								</li>
+								<li class="receiver">
+									<time datetime="2014-04-14">10/1/14 at 5:02p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Coach John S.</a></strong>
+										<p>Romo – playing Jags who are last against pass.</p>
+									</div>
+								</li>
+								<li class="sender">
+									<time datetime="2014-04-14">10/1/14 at 5:03p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Scott Sloane</a></strong>
+										<p>But doesn’t Romo tend to choke against the Jags?</p>
+									</div>
+								</li>
+								<li class="receiver">
+									<time datetime="2014-04-14">10/1/14 at 5:04p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Coach John S.</a></strong>
+										<p>No, it’s the Steelers defense that’s his achilles heel.</p>
+									</div>
+								</li>
+								<li class="sender">
+									<time datetime="2014-04-14">10/1/14 at 5:05p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Scott Sloane</a></strong>
+										<p>Oh right! Thanks.</p>
+									</div>
+								</li>
+								<li class="receiver">
+									<time datetime="2014-04-14">10/1/14 at 5:06p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Coach John S.</a></strong>
+										<p>No problem. Let me know of anything else and good luck!</p>
+									</div>
+								</li>
+							</ul-->
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- footer of the page -->
+		<footer id="footer">
+			<!-- info -->
+			<div class="info">
+				<div class="info-holder contact-again">
+					<p>Want to contact this coach again? </p>
+				</div>
+			</div>
+			<!-- contact options -->
+            <div class="contact">
+                <div class="contact-holder">
+                    <ul style = "height: 45px;">
+                        <li>
+                            <a href="#/textD1/">
+                                <div class = "archive-details-image" style = "float:left;">
+                                    <span picture-fill data-alt="image description" class="img-holder" style = "float:right;">
+                                        <span pf-src="images/icon-question.png" ></span>
+                                        <span pf-src="images/icon-question-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+                                        <span pf-src="images/icon-question-ss.png" data-media="(max-width:600px)"></span>
+                                        <span pf-src="images/icon-question-s-2x.png" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+                                        <!--[if (lt IE 9) & (!IEMobile)]>
+                                         <img src="images/icon-question.png" alt="image description">
+                                         <![endif]-->
+                                        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+                                        <noscript><img src="images/icon-question.png" alt="image description"></noscript>
+                                    </span><!-- end image description -->
+                                </div><!-- end first div -->
+                                <div class = "archive-details-text" style = "float:left;margin:0">
+                                    <strong class="title"  >Text</strong>
+                                    <strong class="rate">$1</strong>
+                                </div><!-- end second div -->
+                            </a><!-- end anchor -->
+                        </li><!-- end first child -->
+                        <li class="chat">
+                            <a href="#/chatD2/">
+                                <div class = "archive-details-image" style = "float:left;">
+                                    <span picture-fill data-alt="image description" class="img-holder" style = "float:right;">
+                                        <span pf-src="images/icon-chat.png" ></span>
+                                        <span pf-src="images/icon-chat-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+                                        <span pf-src="images/icon-chat-ss.png" data-media="(max-width:600px)" ></span>
+                                        <span pf-src="images/icon-chat-s-2x.png" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+                                        <!--[if (lt IE 9) & (!IEMobile)]>
+                                         <img src="images/icon-chat.png" alt="image description">
+                                         <![endif]-->
+                                        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+                                        <noscript><img src="images/icon-chat.png" alt="image description"></noscript>
+                                    </span><!-- end image description -->
+                                </div><!-- end first div -->
+                                <div class = "archive-details-text" style = "float:left;">
+                                    <strong class="title">Live Chat</strong>
+                                    <strong class="rate">5 Min = $5</strong>
+                                </div><!-- end second div -->
+                            </a><!-- end anchor -->
+                        </li><!-- end second child -->
+                        <li>
+                            <a href="#/callD3-A/">
+                                <div class = "archive-details-image" style = "float:left;">
+                                    <span picture-fill data-alt="image description" class="img-holder" style = "float:right;">
+                                        <span pf-src="images/icon-call.png" ></span>
+                                        <span pf-src="images/icon-call-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+                                        <span pf-src="images/icon-call-ss.png" data-media="(max-width:600px)" ></span>
+                                        <span pf-src="images/icon-call-s-2x.png" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+                                        <!--[if (lt IE 9) & (!IEMobile)]>
+                                         <img src="images/icon-call.png" alt="image description">
+                                         <![endif]-->
+                                        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+                                        <noscript><img src="images/icon-call.png" alt="image description"></noscript>
+                                    </span><!-- end image description -->
+                                </div><!-- end first div -->
+                                <div class = "archive-details-text" style = "float:left;">
+                                    <strong class="title">Call</strong>
+                                    <strong class="rate">5 Min = $10</strong>
+                                </div><!-- end second div -->
+                            </a><!-- end anchor -->
+                        </li><!-- end third child -->
+                    </ul><!-- end unordered list -->
+                </div><!-- end contact-holder -->
+            </div><!-- end contact -->
+		</footer>
+	</div>

@@ -1,43 +1,50 @@
 <!doctype html>
-<head>
+<head id="head">
   <title></title>
-      <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
-	   <!-- build:css({.tmp,app}) styles/main.css -->
+	   
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower/loading-bar.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/all.css">
     <link rel="stylesheet" href="styles/animation.css">
     <!-- endbuild -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
- 
   </head>
   <body ng-app="FcsApp">
    
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/jssha/src/sha.js"></script>
-    <script src="bower_components/angular-socket-io/socket.js"></script>
-    <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
+    <script src="bower/jquery.js"></script>
+    <script src="bower/angular.js"></script>
+    <script src="bower/bootstrap.js"></script>
+    <script src="bower/angular-resource.js"></script>
+    <script src="bower/angular-cookies.js"></script>
+    <script src="bower/angular-sanitize.js"></script>
+    <script src="bower/angular-route.js"></script>
+    <script src="bower/angular-ui-router.js"></script>
+    <script src="bower/src/sha.js"></script>
+    <script src="bower/socket.js"></script>
+    <script src="bower/loading-bar.js"></script>
+    
+    <script src="bower/angular-animate.js"></script>
     
 	<!-- include jQuery library -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script type="text/javascript">window.jQuery || document.write('<script src="bower_components/jquery-1.8.3.min.js"><\/script>')</script>
+	<script type="text/javascript" src="bower/jquery.min.js"></script>
+	<script type="text/javascript" src="bower/jquery.main.js"></script>
+	<script type="text/javascript" src="bower/jmain.js"></script>
+	<script src="bower/picturefill.js"></script>
+	<script src="bower/angular-picturefill/angular-picturefill.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+     <script src="scripts/statusbar.js"></script>
 	<!-- include custom JavaScript -->
-	<script type="text/javascript" src="bower_components/jquery.main.js"></script>
+	
 
 
     <!-- endbower -->
@@ -45,14 +52,33 @@
 </head>
 <body>
     
-<div class="view-container">
-<div ng-view class="view-animation"></div>
-</div>
+
+<div ng-view class="slide"></div>
+
     <!--footer id="footer" >
 		
 	</footer-->
    
-    <script src="app/app.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/controllers/coachs-boxController.js"></script>
+    <script type="text/javascript" src="app/controllers/coach-detailsController.js"></script>
+    <script type="text/javascript" src="app/controllers/archive-detailsController.js"></script>
+    
+    <script type="text/javascript" src="app/controllers/messagesController.js"></script>
+    <script type="text/javascript" src="app/controllers/purchase-historyController.js"></script>
+    <script type="text/javascript" src="app/controllers/coachmessagesController.js"></script>
+    
+   
+    <script type="text/javascript" src="app/controllers/live-callController.js"></script>
+    <script type="text/javascript" src="app/controllers/live-chatController.js"></script>
+     <script type="text/javascript" src="app/controllers/live-textController.js"></script>
+    
+    <script type="text/javascript">
+        var flagchata=0; 
+        document.addEventListener('deviceready', function() {
+                                  StatusBar.overlaysWebView(false);
+                                  }, false);
+        </script>
 
 </body>
 </html>

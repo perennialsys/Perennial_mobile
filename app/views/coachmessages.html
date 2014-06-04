@@ -1,5 +1,5 @@
 	<!-- main container of all the page elements -->
-	<div id="wrapper" class="messages-page">
+	<div id="wrapper" class="coachmessages-page">
 		<!-- header of the page -->
 		<div ng-include="'app/views/header.html'" ></div>
         
@@ -183,19 +183,19 @@
 
 	flag=0;
 	
-	$('.messages-page #show-conversation').on('click',function(e){
+	$('.coachmessages-page #show-conversation').on('click',function(e){
                                if(flag==0){
-                               $(".messages-page #conversation").slideDown();
-                               $(".messages-page #show-conversation style").remove();
-                               $('.messages-page #show-conversation').append('<style>.filter-header #show-conversation:after{border-width: 0px 8.5px 11px 8.5px;border-color: transparent transparent #026876 transparent;}</style>');
+                               $(".coachmessages-page #conversation").slideDown();
+                               $(".coachmessages-page #show-conversation style").remove();
+                               $('.coachmessages-page #show-conversation').append('<style>.filter-header #show-conversation:after{border-width: 0px 8.5px 11px 8.5px;border-color: transparent transparent #026876 transparent;}</style>');
                                flag=1;
                                }
 		                       
                                else
                                {
-                               $(".messages-page #conversation").slideUp();
-                               $(".messages-page #show-conversation style").remove();
-                               $('.messages-page #show-conversation').append('<style>.filter-header #show-conversation:after{border-width: 11px 8.5px 0 8.5px;border-color: #026876 transparent transparent transparent;}</style>');
+                               $(".coachmessages-page #conversation").slideUp();
+                               $(".coachmessages-page #show-conversation style").remove();
+                               $('.coachmessages-page #show-conversation').append('<style>.filter-header #show-conversation:after{border-width: 11px 8.5px 0 8.5px;border-color: #026876 transparent transparent transparent;}</style>');
                                flag = 0;
                                }
                                });

@@ -63,6 +63,11 @@
 	2. General reset
 	---------------------------------------------------------*/
 	html, body { height: 100%; width: 100%; margin: 0; }.
+    html, body
+{
+  overflow: hidden;
+}
+
 html { height: 100%; }
 body {
 	min-width: 1003px;
@@ -80,7 +85,9 @@ a {
 	text-decoration: none;
 	color: #282626;
 }
-a:hover { text-decoration: underline; }
+/*a:hover { text-decoration: underline; }
+*/
+
 a:active { background-color: transparent; }
 /* set default styles in all browsers */
 input, textarea, select {
@@ -132,11 +139,11 @@ input[type=submit]:hover { cursor: pointer; }
 #wrapper {
 	overflow: hidden;
 	bottom: 0;
-top: 0;
-position: absolute;
-left: 0;
-right: 0;
-	/*position:relative;*/
+    top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+   /* position:relative;*/
 }
 #ng-scope{
 bottom: 0;
@@ -157,9 +164,145 @@ right: 0;
 	-webkit-box-sizing: border-box;
 }
 .bg-blue #main { padding: 65px 0 60px; }
+
+.bg-blue #mainsignup { padding: 85px 0 60px; }
+
+
+/*For small logo on Sign-Up page*/
+.sign_up_logo {
+	width: 503px;
+	height: 158px;
+	display: block;
+	margin: 10px auto 33px;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: relative;
+	left: 6px;
+	background: url(../images/signup-logo@2x.png) no-repeat;
+}
+
+
+/*Welcome overlay*/
+#main-Overlay{position: absolute; top:76px;padding-left:25%;padding-right:25%;}
+
+#main-Overlay .title
+{
+font-family:Helvetica;font-size:36px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;
+text-align:center;line-height:40px;
+}
+
+
+#mainforgot-Overlay
+{
+padding-top:27%;
+max-width:370px;margin:0 auto;
+}
+
+#mainforgot-Overlay .title
+{
+font-family:Helvetica;font-size:36px;font-weight:bold;font-style:bold;text-decoration:none;color:#FFFFFF;
+text-align:center;line-height:30px;
+
+}
+
+
+#mainforgot-Overlay .p1{
+text-align:center;padding-top: 20px;font-family:Helvetica;font-size:21px;font-weight:bold;
+font-style:bold;text-decoration:none;color:#FFFFFF;line-height:32px;
+}
+
+#mainforgot-Overlay #email{
+margin-top:-10px;
+margin-right: 4%;
+}
+
+#mainforgot-Overlay #email_id
+{
+height:29px;
+}
+
+.p1{
+text-align:center;padding-top: 36px;font-family:Helvetica;font-size:28px;font-weight:normal;
+font-style:normal;text-decoration:none;color:#FFFFFF;line-height:32px;
+}
+
+.p3{
+text-align:center;font-family:Helvetica;font-size:28px;font-weight:normal;
+font-style:normal;text-decoration:none;color:#FFFFFF;line-height:32px;
+
+}
+.p2{
+text-align:center;line-height: 32px;margin-bottom: 0px;
+}
+.get-started-btn { 
+text-align:center; 
+/*margin-top: 20%;
+margin-right: 9%;*/
+
+margin: 20% auto;
+}
+
+.get-btn {
+  display: inline-block;
+  padding: 6px 33px;
+  margin-bottom: 0;
+  font-size: 26px;
+  border-radius:4px !important;
+  font-weight: normal;
+  line-height: 28px;
+  height: 28px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  color:#333;
+  background-color:white;
+}
+
+
+#mainforgot-Overlay .get-btn {
+/*font-size:px;
+text-align: center;
+padding: 6px 0px;
+width:220px;
+border-radius: 5px;-webkit-border-radius: 3px !important;*/
+
+font-size: 16px;
+text-align: center;
+padding: 6px 0px;
+width: 180px;
+border-radius: 5px;
+-webkit-border-radius: 3px !important;
+margin: 0px auto;
+}
+#closeBtn{ color:#FFF; cursor:pointer; float:right; }
+
+.close_btn{
+position: absolute;
+right: 4px;
+top: 4px;
+width: 60px;
+height: 60px;
+background-image: url('../images/sign/cancel@2x.png');
+}
+
+.scrollable-text {
+	font-family:Helvetica;font-size:21px;font-weight:normal;
+	text-decoration: none;
+	margin-left: 5%;
+	padding: 10px 5px 0px 0px;
+	color: #333333;
+}
+
+
 .coach-details-page #main { padding: 55px 0 105px;}
 .live-chat-page #main { padding: 55px 0 0;}
 .messages-page #mian{ padding: 55px 0 57px;}
+
+
 /* page logo styles */
 #main .logo {
 	width: 503px;
@@ -210,7 +353,22 @@ right: 0;
 	height: 59px;
 	margin: 14px 0 13px;
 	color: #fff;
-	text-transform: capitalize;
+	text-transform: none;
+	border-radius: 3px !important;
+	font-size: 23px;
+	line-height: 29px;
+	padding: 15px 15px;
+	background: #ff9914;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.signup input[type="submit"] {
+	width:100%;
+	height: 59px;
+	margin: 14px 0 13px;
+	color: #fff;
+	text-transform: none;
 	border-radius: 3px !important;
 	font-size: 23px;
 	line-height: 29px;
@@ -224,7 +382,7 @@ right: 0;
 	display: inline-block;
 	vertical-align: top;
 	color: #b6fe09;
-	text-transform: capitalize;
+	text-transform: none;
 	font: 23px/29px 'helveticaneue-mediumregular', Arial, sans-serif;
 }
 /* footer styles */
@@ -233,11 +391,12 @@ right: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	height: 40px;background: #05b2c7;
+	/*height: 40px;*/
+	background: #05b2c7;
 }
 /* for signup styles */
 .signup {
-	max-width: 1024px;
+	max-width: 400px;
 	margin: 0 auto;
 	padding: 10px 0;
 	text-align: center;
@@ -296,7 +455,7 @@ right: 0;
 	color: #048797;
 	display: block;
 }
-.welcome-area li a:hover { color: #fff; }
+/*.welcome-area li a:hover { color: #fff; }*/
 /* header styles */
 #header {
 	height: 55px;
@@ -334,8 +493,9 @@ right: 0;
 #header h1 {
 	float: left;
 	font-size: 22px;
+    font-weight: bold;
 	line-height: 35px;
-	font-weight: normal;
+
 	padding: 10px 22px;
 	color: #fff;
 	margin: 0;
@@ -541,7 +701,7 @@ right: 0;
 	display:block;
 }
 .submenu li a:hover {
-	color: #05b2c7;
+	/*color: #05b2c7;*/
 	text-decoration: none;
 }
 /* filter header styled */
@@ -619,7 +779,7 @@ right: 0;
 	display: block;
 	font-weight: normal;
 	margin: 0 0 4px;
-	text-transform: capitalize;
+	text-transform: none;
 }
 .coachs .title a { color: #026976; }
 .coachs .star-rating { margin: 0 0 10px;}
@@ -640,7 +800,7 @@ right: 0;
 .coachs .status.active span.offline { display: none; }
 .coachs .status.active span.online,
 .coachs .status span.offline { display: block; }
-.coachs p { margin: 0; }
+/*.coachs p { margin: 0; }*/
 .coachs a.more {
 	width: 95px;
 	border-radius: 3px;
@@ -727,7 +887,7 @@ right: 0;
 }
 .contact img {
 	display: block;
-	width: 100%;
+	width: 95%;
 	height: auto;
 }
 .contact .title {
@@ -790,7 +950,7 @@ right: 0;
 	font-size:16px;
 	line-height: 20px;
 	color: #fff;
-	text-transform: capitalize;
+	text-transform: none;
 }
 .office-hours td:first-child { width: 56%; }
 .office-hours td {
@@ -857,6 +1017,8 @@ right: 0;
 	font-style: normal;
 	font-size: 16px;
 }
+
+
 .live-chat .time-remain {
 	height: 30px;
 	text-align: center;
@@ -871,6 +1033,29 @@ right: 0;
 }
 .live-chat .time-remain.active time { display: block; }
 .live-chat .time-remain span { color: #e90303; }
+
+/*Call time remaining*/
+.live-chat .time-remaing {
+    line-height: 40px;
+    height: 40px;
+    width:380px;
+	text-align: center;
+	font-size: 18px;
+    margin:0 auto;
+
+	color: #fff;
+	background: url(../images/overlay-bg.png);
+}
+
+.live-chat .time-remaing time {
+	display: none;
+	font-style: normal;
+}
+.live-chat .time-remaing.active time { display: block; }
+.live-chat .time-remaing span { color: #e90303; }
+
+
+
 .live-chat .chat {
 	list-style: none;
 	padding: 27px 33px;
@@ -894,7 +1079,7 @@ right: 0;
 	float: left;
 	margin: 0 6px 0 0;
 	letter-spacing: -0.4px;
-	text-transform: capitalize;
+	text-transform: none;
 	font-weight: normal;
 }
 .live-chat .chat .name a:after { content: ":"; }
@@ -917,6 +1102,29 @@ right: 0;
 	text-transform: uppercase;
 	background: #8bc403;
 }
+
+#ExtendCall, #EndCall {
+	border-radius: 5px !important;
+	color: white;
+	width:460px;
+	padding: 1% 1% 1% 1%;
+    height:44px;
+    line-height:44px;
+    float:none;
+}
+
+.btn-end-call 
+{
+    width:392px;
+    height: 46px;
+	float: right;
+	font-size: 17px;
+    font-weight:bold;
+	line-height: 46px;
+	color: #fff;
+	padding:0;
+	text-transform: none;
+}
 .coachs .message-box .text {
 	height: 25px;
 	padding: 5px 10px;
@@ -935,6 +1143,7 @@ right: 0;
 }
 /* messages styles */
 .messages .filter-header { padding: 6px 9999px 9px; }
+
 .messages .filter-header a.btn-filter {
 	margin: 0 21px;
 	font-size:17px;
@@ -983,6 +1192,7 @@ right: 0;
 .messages ul .incoming a:before { background-color: #8bc403 !important; }
 .messages ul .wait a:before { background-color: #fedd03 !important; }
 .messages ul .call a:before { background: url(../images/icon-call2.png) no-repeat 50% 50%; }
+.messages ul .all a:before { background: url(../images/icon-all2.png) no-repeat 50% 50%; }
 .messages ul .question a:before { background: url(../images/icon-question2.png) no-repeat 50% 50%; }
 .messages ul .chat a:before { background: url(../images/icon-chat2.png) no-repeat 50% 50%; }
 .messages ul a:hover { text-decoration: none; }
@@ -1061,6 +1271,7 @@ right: 0;
 	position: relative;
 	overflow: hidden;
 	width: 100% !important;
+
 }
 .scrollable-area-wrapper .hscrollbar,
 .scrollable-area-wrapper .vscrollbar {
@@ -1100,13 +1311,23 @@ right: 0;
 	width: auto;
 }
 .scrollable-area {
-	width:100% !important;
+	width:98% !important;
 	height: 550px;
 	position: relative;
 }
 .scroll-holder { overflow: hidden; }
 .live-chat .scrollable-area-wrapper .hscrollbar,
 .live-chat .scrollable-area-wrapper .vscrollbar { width: 11px; }
+
+
+.purchase-page .spantotal
+{
+
+width:50%;
+padding-left:19%;
+height:44px;
+line-height: 44px;
+}
 /*  ---------------------------------------------------------
 	5. Styles for Responsive web design
 	---------------------------------------------------------*/
@@ -1115,6 +1336,84 @@ right: 0;
 	body { min-width: 320px;}
 }
 @media only screen and (max-width: 900px) {
+
+.bg-blue #main { padding: 65px 0 60px; }
+
+/*For scrollable text on Live Chat Welcome page*/
+.scrollable-text {
+	font-family:Helvetica;font-size:18px;font-weight:normal;
+	text-decoration: none;
+	margin-left: 5%;
+	padding: 10px 5px 0px 0px;
+	color: #333333;
+}
+
+#main-Overlay{position: absolute; top:76px;padding-left:20%;padding-right:20%;}
+
+#main-Overlay .title
+{
+font-family:Helvetica;font-size:32px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;
+text-align:center;line-height:40px;
+}
+
+#mainforgot-Overlay
+{
+padding-top:37%;
+max-width:370px;margin:0 auto;
+}
+
+#mainforgot-Overlay .title
+{
+font-family:Helvetica;font-size:32px;font-weight:bold;font-style:bold;text-decoration:none;color:#FFFFFF;
+text-align:center;line-height:30px;
+
+}
+
+#mainforgot-Overlay .p1{
+text-align:center;padding-top: 20px;font-family:Helvetica;font-size:21px;font-weight:bold;
+font-style:bold;text-decoration:none;color:#FFFFFF;line-height:32px;
+}
+
+#mainforgot-Overlay #email{
+margin-top:-10px;
+margin-right: 4%;
+}
+
+#mainforgot-Overlay #email_id
+{
+height:29px;
+}
+
+.p1{
+text-align:center;padding-top: 50px;font-family:Helvetica;font-size:21px;font-weight:normal;
+font-style:normal;text-decoration:none;color:#FFFFFF;line-height:32px;
+}
+
+.p3{
+text-align:center;font-family:Helvetica;font-size:21px;font-weight:normal;padding-top: 30px;
+font-style:normal;text-decoration:none;color:#FFFFFF;line-height:32px;
+
+}
+.p2{
+text-align:center;line-height: 32px;margin-bottom: 0px;
+}
+.get-started-btn { 
+text-align:center; 
+/*margin-top: 40%;
+margin-right: 9%;*/
+
+/*margin-top: 40%;
+margin-right: 9%;*/
+margin: 40% auto;
+}
+.get-btn
+{
+ line-height: 24px;
+  height: 24px;
+  font-size:21px;
+  }
+
+
 	#main .logo {
 		left: -11px;
 		margin: 0 auto 40px;
@@ -1149,7 +1448,7 @@ right: 0;
 		text-align: center;
 	}
 	.coachs a.more:after { right: 12px; }
-	.coachs .box { margin: 0 0 22px; }
+	.coachs .box { margin: 0 0 10px; }
 	.coachs .alignleft { margin: 0 17px 0 0; }
 	.coachs .text { padding: 2px 0; }
 	.coachs .title { margin: 0 0 8px; }
@@ -1185,7 +1484,7 @@ right: 0;
 	.live-chat .author {
 		float: none;
 		width: auto;
-		padding: 30px 19px 52px 38px;
+		padding: 30px 19px 10px 38px;
 		margin: 0;
 		background: none;
 	}
@@ -1220,6 +1519,9 @@ right: 0;
 		left: -6px;
 	}
 	.live-chat .time-remain { margin: 0 14px 0 29px; }
+    
+   /* .live-chat .time-remaing { margin: 0 14px 0 29px; }*/
+
 	.live-chat .chat {
 		padding: 29px 30px;
 		min-height: inherit;
@@ -1248,10 +1550,202 @@ right: 0;
 	#nav .nav-slide {
 		padding: 63px 26px 20px 30px;
 	}
+    
+    /*Call overlay*/
+    
+    #extend-call-confirmation-overlay, #end-call-confirmation-overlay,#timer-running-out-overlay1 {
+		 display: none;
+		 overflow: auto;
+		 overflow-y: hidden;
+		 top: 48%;
+		 right: 0;
+		 bottom: 0;
+		 left: 0;
+		 z-index: 1040;
+		 margin: 0px auto;
+		 color: #FFF;
+		 position: fixed;
+		 background: url(../images/overlay-bg.png);
+	 }
+	 
+	 #overlay-message {
+		 margin-top: 1%;
+	 text-align: center;
+	 }
+	 
+	 #Purchase1-Running-Message {
+		 text-align: center;
+	 	margin-bottom: 0px;
+	 	margin-top: 26%;
+	 }
+	   #Purchase-Running-Message {
+		 text-align: center;
+	 	margin-bottom: 0px;
+	 	margin-top: 22%;
+	 }
+	 
+	 #Timer-Running-Message {
+		 text-align: center;
+	 margin-bottom: 0px;
+	 margin-top: 8%;
+	 }
+	 
+	.purchaseover-btn {
+		margin-top: 16%;
+	}
+	 .call-btn {
+		 margin-top: 10%;
+	 }
+     
+    .archive-details-text, .archive-details-image {
+		width: 50%;
+	}
+    
+    
+    .live-chat .scrollable-area {
+		height: 302px;
+		border-left: 2px solid #c1c2c1;
+	}
+    
+    .live-chat .scrollable-area-wrapper{
+        margin-left:29px;
+    }
+     .call-box .scrollable-area-wrapper{
+        margin-left:0px;
+    }
+    
+    .call-box{
+    margin-top:20%;
+    }
+    
+    .chat-box {
+		padding: 0 13px 0 16px;
+		position: relative;
+	}
+	.chat-box:after {
+		height: 2px;
+		content: "";
+		position: absolute;
+		left: 16px;
+		right: 13px;
+		bottom: 0;
+		background: #c1c2c1;
+	}
+
 }
+
+
+
 /* styles for screens max width 600px */
 @media only screen and (max-width: 600px) {
 	.bg-blue #main { padding: 70px 0 0; }
+    
+    .bg-blue #mainsignup { padding: 70px 0 0; }
+    
+    /*For small logo on Sign-Up page*/
+.sign_up_logo {
+	width: 503px;
+	height: 75px;
+	display: block;
+	margin: 10px auto 33px;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: relative;
+	left: 6px;
+	background: url(../images/signup-logo.png) no-repeat;
+}
+    
+#main-Overlay .title
+{
+font-family:Helvetica;font-size:23px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;
+text-align:center;line-height:30px;
+}
+
+#mainforgot-Overlay
+{
+padding-top:67%;
+max-width:370px;margin:0 auto;
+}
+
+#mainforgot-Overlay .title
+{
+font-family:Helvetica;font-size:23px;font-weight:bold;font-style:bold;text-decoration:none;color:#FFFFFF;
+text-align:center;line-height:30px;
+
+}
+
+#mainforgot-Overlay .p1{
+text-align:center;padding-top: 16px;font-family:Helvetica;font-size:16px;font-weight:bold;
+font-style:bold;text-decoration:none;color:#FFFFFF;line-height:22px;
+}
+
+
+
+
+#mainforgot-Overlay #email{
+margin-top:15px;
+
+
+}
+
+#mainforgot-Overlay #email_id
+{
+height:20px;
+width:100%;
+padding-right:0%;
+}
+
+
+/*For scrollable text on Live Chat Welcome page*/
+.scrollable-text {
+	font-family:Helvetica;font-size:16px;font-weight:normal;
+	text-decoration: none;
+	margin-left: 5%;
+	padding: 10px 5px 0px 0px;
+	color: #333333;
+}
+
+.p1{
+text-align:center;padding-top: 36px;font-family:Helvetica;font-size:16px;font-weight:normal;
+font-style:normal;text-decoration:none;color:#FFFFFF;line-height:22px;
+}
+
+.p3{
+text-align:center;font-family:Helvetica;font-size:16px;font-weight:normal;padding-top: 6px;
+font-style:normal;text-decoration:none;color:#FFFFFF;line-height:22px;
+
+}
+.p2{
+text-align:center;line-height: 0px;margin-bottom: 0px;
+}
+.get-started-btn { 
+text-align:center; 
+/*margin-top: 46px;
+margin-right: 9%;*/
+
+margin: 46px auto;
+}
+
+
+
+.get-btn
+{
+ line-height: 18px;
+  height: 18px;
+  font-size:14px;
+  }
+#closeBtn{ color:#FFF; cursor:pointer; float:right; }
+
+.close_btn{
+position: absolute;
+right: 4px;
+top: 4px;
+width: 31px;
+height: 31px;
+background-image: url('../images/sign/cancel.png');
+}
+
+	#main-Overlay{position: absolute; top:46px;padding-left:1%;padding-right:2%;}
 	#main .logo {
 		width: 295px;
 		height: 144px;
@@ -1276,6 +1770,12 @@ right: 0;
 		margin: 13px 0 8px;
 		font: 19px/44px 'helveticaneue-mediumregular', Arial, sans-serif;
 	}
+    .signup input[type="submit"] {
+		height: 44px;
+		padding: 0;
+		margin: 13px 0 8px;
+		font: 19px/44px 'helveticaneue-mediumregular', Arial, sans-serif;
+	}
 	.login-form a.forgot {
 		font-size: 16px;
 		line-height: 20px;
@@ -1291,8 +1791,8 @@ right: 0;
 		min-width: 160px;
 		font-size: 17px;
 		line-height: 18px;
-		-webkit-box-shadow: 1px 1px 0 0 #50c9d8;
-		box-shadow: 1px 1px 0 0 #50c9d8;
+		/*-webkit-box-shadow: 1px 1px 0 0 #50c9d8;
+		box-shadow: 1px 1px 0 0 #50c9d8;*/
 	}
 	.welcome-area ul {
 		max-width: 320px;
@@ -1323,7 +1823,8 @@ right: 0;
 		background-position: -42px -453px;
 	}
 	#header h1 {
-		font-size: 15px;
+		font-size: 17px;
+        font-weight: bold;
 		line-height: 20px;
 		padding: 10px 6px;
 	}
@@ -1401,9 +1902,13 @@ right: 0;
 		margin: 0 auto 5px;
 	}
 	#main { padding: 40px 0 123px; }
+    
+
 	.coach-details-page #main { padding: 40px 0 79px;}
 	.live-chat-page #main { padding: 40px 0 16px;}
 	.messages-page #main { padding: 40px 0 45px;}
+    
+
 	.filter-header { padding: 6px 15px; }
 	.filter-header a.btn-filter {
 		font-size: 13px;
@@ -1525,6 +2030,10 @@ right: 0;
 		line-height: 18px;
 		left: auto;
 	}
+    .call-box {
+     margin-top:20%;
+     }
+
 	.chat-box {
 		padding: 0 13px 0 16px;
 		position: relative;
@@ -1545,6 +2054,16 @@ right: 0;
 		line-height: 24px;
 		height: 24px;
 	}
+    
+    .live-chat .time-remaing {
+		margin: 0 auto;
+		font-size: 14px;
+		line-height: 40px;
+		height: 40px;
+        width:190px;
+	}
+
+
 	.live-chat .chat {
 		font-size: 14px;
 		line-height: 17px;
@@ -1564,30 +2083,68 @@ right: 0;
 		position: relative;
 		z-index: 999;
 	}
+    
+    
 	.message-box input[type="submit"] {
 		width: 65px;
 		font-size: 13px;
 	}
-	.archive-detail-page .live-chat .author { padding: 18px 23px 5px 16px; }
+
+#ExtendCall, #EndCall {
+	border-radius: 5px !important;
+	color: white;
+	width:230px;
+	padding: 1% 1% 1% 1%;
+    height:44px;
+    line-height:44px;
+    float:none;
+}
+
+
+#Senddays, #Sendpurchase{
+border-radius: 5px !important;
+	color: white;
+	width:230px;
+	padding: 1% 1% 1% 1%;
+    height:40px;
+    line-height:40px;
+    float:none;
+}
+
+
+    
+    .btn-end-call 
+    {
+        width:196px;
+        height: 46px;
+        float: right;
+        font-size: 13px;
+        line-height: 46px;
+        color: #fff;
+        padding:0;
+        text-transform: none;
+        font-weight:bold;
+    }
+	 .live-chat .author { padding: 18px 23px 5px 16px; }
 	.coachs .author .star-rating { margin: 0 0 10px;}
 	.coachs .author .star-rating img{ width: 73px;}
-	.archive-detail-page .live-chat.coachs .status { display: none; }
+	 .live-chat.coachs .status { display: block; }
 	.live-chat .author time.chatted {
 		font-size: 14px;
 		line-height: 18px;
 	}
-	.archive-detail-page .coachs.live-chat .fav { padding: 0; }
+	 .coachs.live-chat .fav { padding: 0; }
 	#footer .info .contact-again {
 		font-size: 15px;
 		line-height: 20px;
 	}
-	.archive-detail-page .live-chat.coachs .title {
+	 .live-chat.coachs .title {
 		position: relative;
 		padding: 0 13px 0 0;
 		display: inline-block;
 		vertical-align: top;
 	}
-	.archive-detail-page .live-chat.coachs .title:after {
+	 .live-chat.coachs .title:after {
 		width: 8px;
 		height: 8px;
 		content: "";
@@ -1607,6 +2164,7 @@ right: 0;
 		padding: 5px 35px 5px 66px;
 	}
 	.messages ul a:before { width: 50px; }
+    .messages ul .all a:before { background: url(../images/icon-all2-s.png) no-repeat 50% 50%; }
 	.messages ul .call a:before { background: url(../images/icon-call2-s.png) no-repeat 50% 50%; }
 	.messages ul .question a:before { background: url(../images/icon-question2-s.png) no-repeat 50% 50%; }
 	.messages ul .chat a:before { background: url(../images/icon-chat2-s.png) no-repeat 50% 50%; }
@@ -1644,6 +2202,195 @@ right: 0;
 		width: 20px;
 		height: 20px;
 	}
+    
+    
+    #extend-call-confirmation-overlay, #end-call-confirmation-overlay,#timer-running-out-overlay1 {
+		display: none;
+		overflow: auto;
+		overflow-y: hidden;
+		top: 35.5%;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1040;
+		margin: 0px auto;
+		color: #FFF;
+		position: fixed;
+		background: url(../images/overlay-bg.png);
+	}
+	 #Purchase1-Running-Message {
+		 text-align: center;
+	 	margin-bottom: 0px;
+	 	margin-top: 31%;
+	 }
+	#Purchase-Running-Message
+	{
+	 text-align: center;
+	 margin-bottom: 0px;
+	 margin-top: 24%;
+	}
+	.purchaseover-btn {
+		margin-top: 27%;
+	}
+	
+	#Timer-Running-Message {
+		text-align: center;
+		margin-bottom: 0px;
+		margin-top: 17%;
+	}
+	
+	.call-btn {
+		margin-top: 20%;
+	}
+    
+    
+    
+
+    .archive-details-image {
+		width: 35%;		
+	}
+	
+	.archive-details-text {
+		width: 65%;
+	}
+	
+	.archive-details-image img {
+		float: right;
+	}
+    
+        .live-chat .scrollable-area-wrapper{
+        margin-left:0px;
+    }
+   .purchase-page .spantotal
+{
+
+width:50%;
+padding-left:10%;
+height:44px;
+line-height: 44px;
+}
+
+}
+
+.archive-details-text strong{
+
+text-align: left;
+padding-left: 3%
+}
+
+
+.purchase-page .spanall
+{
+border-left:2px solid #bbbbbb;
+width: 49%;
+float: right;
+text-align: center;
+padding-left:0%;
+height:44px;
+line-height: 44px;
+}
+
+
+
+/* styles for screens max width 600px */
+@media only screen and (max-height: 520px) and (max-width: 600px){
+
+#wrapper {
+	overflow: hidden;
+	bottom: 0;
+    top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+   /* position:relative;*/
+}
+
+}
+@media only screen and (max-height: 600px) and (max-width: 600px){
+
+ #Purchase1-Running-Message {
+		 text-align: center;
+	 	margin-bottom: 0px;
+	 	margin-top: 28%;
+	 }
+	#Purchase-Running-Message
+	{
+	 text-align: center;
+	 margin-bottom: 0px;
+	 margin-top: 21%;
+	}
+	.purchaseover-btn {
+		margin-top: 30%;
+	}
+
+}
+
+/* styles for screens max width 600px */
+@media only screen and (max-height: 480px) and (max-width: 600px){
+.bg-blue #main { padding: 25px 0 0; }
+
+.bg-blue #mainsignup { padding: 25px 0 0; }
+
+.call-btn {
+		margin-top: 7%;
+	}
+	 #Purchase1-Running-Message {
+		 text-align: center;
+	 	margin-bottom: 0px;
+	 	margin-top: 27%;
+	 }
+	#Purchase-Running-Message
+	{
+	 text-align: center;
+	 margin-bottom: 0px;
+	 margin-top: 20%;
+	}
+	.purchaseover-btn {
+		margin-top: 9%;
+	}
+    
+    #Timer-Running-Message {
+		 text-align: center;
+	 margin-bottom: 0px;
+	 margin-top: 8%;
+	 }
+	 
+    
+#mainforgot-Overlay
+{
+padding-top:37%;
+max-width:370px;margin:0 auto;
+}
+    #extend-call-confirmation-overlay, #end-call-confirmation-overlay,#timer-running-out-overlay1 {		
+		display: none;
+		overflow: auto;
+		overflow-y: hidden;
+		top: 39.5%;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1040;
+		margin: 0px auto;
+		color: #FFF;
+		position: fixed;
+		background: url(../images/overlay-bg.png);
+	}
+/*For small logo on Sign-Up page*/
+.sign_up_logo {
+	width: 503px;
+	height: 75px;
+	display: block;
+	margin: 10px auto 33px;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: relative;
+	left: 6px;
+	background: url(../images/signup-logo.png) no-repeat;
+}
+
+#main-Overlay{position: absolute; top:16px;padding-left:1%;padding-right:2%;}
+
+
 }
 /*  ---------------------------------------------------------
 	6. Styles for ratina
@@ -1666,6 +2413,10 @@ right: 0;
 		background: url(../images/icon-call2-2x.png) no-repeat 50% 50%;
 		background-size: 44px 44px;
 	}
+    .messages ul .all a:before {
+		background: url(../images/icon-all2-2x.png) no-repeat 50% 50%;
+		background-size: 44px 44px;
+	}
 	.messages ul .question a:before {
 		background: url(../images/icon-question2-2x.png) no-repeat 50% 50%;
 		background-size: 44px 44px;
@@ -1682,6 +2433,10 @@ right: 0;
 @media (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 600px) and (min-resolution: 144dpi) {
 	.messages ul .call a:before {
 		background: url(../images/icon-call2-s-2x.png) no-repeat 50% 50%;
+		background-size: 35px 35px;
+	}
+    .messages ul .all a:before {
+		background: url(../images/icon-all2-s-2x.png) no-repeat 50% 50%;
 		background-size: 35px 35px;
 	}
 	.messages ul .question a:before {
@@ -1716,32 +2471,22 @@ padding-right: 15px;
 padding-left: 15px;
 margin-right: auto;
 margin-left: auto;
+overflow: auto;
+		overflow-y: hidden;
 }
+
+
 .overlay-message { width:auto; height:100px; z-index:-1000; padding-top:50px; }
-.overlay-message h4 { font-size:20px; text-align:center; line-height:32px; margin:47px 14px 10px 0;  }
-.overlay-message p { text-align:center; line-height:22px; }
-.get-started-btn { text-align:center; }
-#closeBtn{ color:#FFF; cursor:pointer; float:right; }
-.get-btn {
-  display: inline-block;
-  padding: 6px 33px;
-  margin-bottom: 0;
-  font-size: 14px;
-  border-radius:4px !important;
-  font-weight: normal;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  color:#333;
-}
+
+
+
+
+
+
+
+
+
+
 
 #sign-form input{
 	margin-bottom:8px;
@@ -1752,49 +2497,211 @@ margin-left: auto;
 	padding-left: 5px;
 	float: left;
 	cursor: pointer;
-	
 	}
-	
+	.signback:hover  { text-decoration: none;color:white; }
 	#h2Signup{
 	color:white;font-size: 22px;padding-bottom: 11px;padding-top: 15px;
 	}
 
-/*For small logo on Sign-Up page*/
-.sign_up_logo {
-	width: 503px;
-	height: 75px;
+
+
+ 
+*,
+*:before,
+*:after {
+   -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+
+
+.scroll-text #on-call-now {
+	padding-top: 40%;
+	text-align: center;
+}
+/*
+.scrollable-text {
+	font-family: Arial;
+	font-size: 13px;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	margin-left: 5%;
+	padding: 5px 5px;
+	color: #333333;
+}*/
+
+
+@media (min-width:901px) {
+	.timer-running-overlay {
+		padding: 4% 15% 15% 15%;
+	}
+
+	#timer-running-heading {
+		text-align: center;
+	}
+	 #Purchase1-Running-Message {
+		 text-align: center;
+	 	margin-bottom: 0px;
+	 	margin-top: 9%;
+	 }
+	#Purchase-Running-Message
+	{
+	 text-align: center;
+	 margin-bottom: 0px;
+	 margin-top: 15%;
+	}
+
+	#Timer-Running-Message {
+		margin-top: 31%;
+	}
+.purchaseover-btn {
+		margin-top: 12%;
+	}
+	.call-btn {
+		text-align: center;
+		margin-top: 30%;
+	}
+	
+	#extend-call-confirmation-overlay, #end-call-confirmation-overlay, #timer-running-out-overlay1 {
+		display: none;
+	 	overflow: auto;
+		overflow-y: hidden;
+		top: 15%;
+		right: 0;
+		bottom: 0;
+		left: 275px;
+		z-index: 1040;
+		max-width: 749px;
+		margin: 0px auto;
+		color:#FFF;
+		position:fixed;
+		background:url(../images/overlay-bg.png);
+	}
+	 
+	
+}
+
+
+
+#ExtendCall {
+	background-color: #0066ff;
+}
+
+#EndCall {
+	background-color: #666666;
+}
+
+
+/*Call now button pop up*/
+
+#end-call-popup {
+
+
+	line-height: 29px;
+	min-width: inherit;
 	display: block;
-	margin: 10px auto 33px;
-	text-indent: -9999px;
-	overflow: hidden;
+	margin: 0 auto;
 	position: relative;
-	left: 6px;
-	background: url(../images/small-logo.png) no-repeat;
+	
+	float: none;
+}
+
+.Inner{
+    text-align: center;
+    cursor: pointer;
+    height: 46px;
+    font-size: 13px;
+}
+
+#spend-money {
+    //word-spacing: -2px; 
+
+    line-height: 35px;
+    float: left;
+    width: 55%;
+    background-color: lightgray;
+}
+
+#cancel {
+    background: #853536;
+    line-height: 35px;
+    float: right;
+    width: 45%;
+    color: white;
 }
 
 
-.slide-animate.ng-enter, .slide-animate.ng-leave{
- -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
-  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
-   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
-      transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
- }
-
-
-.slide-animate.ng-enter.ng-enter-active {
- position: absolute;
- left: 1300px;
+.chat-popup {
+	position: relative;
+	display: none;
+	left: 1px;
+	width: 100%;
+	/* height: 59px; */
+	line-height: 29px;
+	min-width: inherit;
+	margin: 0 auto;
 }
 
-.slide-animate.ng-enter {
- left: 0;
+
+
+/*26-05 For messages.html = The slider of "All(15)"*/
+.messages ul a:after {
+	width: 15px;
+	height: 25px;
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin: -11px 0 0;
+	right: 35px;
+	
 }
 
-.slide-animate.ng-leave.ng-leave-active {
- position: absolute;
- left: -1700px;
- }
+#first:after {
+	background: none;
+}
 
-.slide-animate.ng-leave {
- right: 0;
- }
+#first:before {
+	background-color: #8bc403 !important;
+    
+}
+
+@media (min-height: 480px) and (min-width: 600px){
+	.archive-details-text, .archive-details-image {
+		width: 50%;
+	}
+}
+
+
+.messages .filter-header a.btn-filter:hover{
+text-decoration: none;
+}
+#Senddays, #Sendpurchase{
+border-radius: 5px !important;
+	color: white;
+	width:230px;
+	padding: 1% 1% 1% 1%;
+    height:40px;
+    line-height:40px;
+    float:none;
+}
+
+
+.purchase-page .messages ul a::after{
+background: none;
+}
+
+.purchase-page .messages ul span{
+height: 25px;
+position: absolute;
+margin: -41px 0 0;
+right: 35px;
+text-align: right;
+font-size: 15px;
+/* font-weight: bold; */
+font-style: normal;
+text-decoration: none;
+color: #0099CC;
+                                    
+}

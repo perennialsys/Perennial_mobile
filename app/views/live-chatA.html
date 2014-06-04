@@ -1,0 +1,209 @@
+<!--script type="text/javascript" src="bower/main.js"></script-->
+
+<script type="text/javascript">
+	//showMsg();
+    
+	/*$(document).ready(function(){
+     showMsg();
+     });*/
+
+flag=0;
+if(flagchata==1)
+{
+    var msg = document.getElementById('end-call-confirmation-overlay');
+    msg.style.display = 'block';
+}
+function showTimerRunningOverlay() {
+    var msg = document.getElementById('timer-running-out-overlay1');
+    msg.style.display = 'block';
+}
+
+function hideTimerRunningOutOverlay(){
+    //  alert("In hideTimerRunningOutOverlay()");
+    $('#timer-running-out-overlay1').slideUp();
+    // window.location("#/callD3-A/");
+}
+
+function showEndCallConfirmationOverlay() {
+    hideTimerRunningOutOverlay();
+    // alert("In showEndCallConfirmationOverlay()");
+    var msg = document.getElementById('end-call-confirmation-overlay');
+    msg.style.display = 'block';
+}
+
+function hideEndCallConfirmation() {
+    //  alert("In hideEndCallConfirmation()");
+    hideTimerRunningOutOverlay();
+    $('#end-call-confirmation-overlay').slideUp();
+    //$(location).attr('href', '#/callD3-A/');
+}
+
+function showExtendCallConfirmationOverlay() {
+    hideTimerRunningOutOverlay();
+    
+    var msg = document.getElementById('extend-call-confirmation-overlay');
+    msg.style.display = 'block';
+}
+
+
+
+function hideExtendCallConfirmation() {
+    hideTimerRunningOutOverlay();
+    // hideEndCallConfirmation();
+    $('#extend-call-confirmation-overlay').slideUp();
+}
+</script>
+<!-- main container of all the page elements -->
+	<div id="wrapper" class="live-chata-page">
+		<!-- header of the page -->
+		 <div ng-include="'app/views/header.html'" ></div>
+		<!-- contain main informative part of the site -->
+		<div id="main">
+			<!-- live chat -->
+			<section class="coachs live-chat">
+				<div class="author">
+					<div class="box">
+						<div class="fav active">
+							<a href="#">star</a>
+							<strong>FAV</strong>
+						</div>
+						<div class="img-holder">
+							<span picture-fill data-alt="image description">
+								<span pf-src="images/img1.jpg" ></span>
+								<span pf-src="images/img1-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+								<span pf-src="images/img1-s.jpg" data-media="(max-width:600px)" ></span>
+								<span pf-src="images/img1-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<img src="images/img1.jpg" alt="image description">
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript><img src="images/img2.jpg" alt="image description"></noscript>
+							</span>
+						</div>
+						<div class="text">
+							<strong class="title"><a href="#">Coach John S.</a></strong>
+							<div class="status active">
+								<span class="online">ONLINE - AVAILABLE</span>
+								<span class="offline">OFFLINE</span>
+							</div>
+						</div>
+					</div>
+					<a  onClick = "showEndCallConfirmationOverlay()" class="end-setion">End Session</a>
+				</div>
+				<!-- live chat box -->
+				<div class="chat-box">
+					<div class="time-remain active">
+						<time datetime="2014-04-14">Time Remaining = <span>3:46</span></time>
+					</div>
+					<div class="scrollable-area">
+						<div class="scroll-holder">
+							<ul class="chat">
+								<li class="sender">
+									<time datetime="2014-04-14">10/1/14 at 4:52p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Scott Sloane</a></strong>
+										<p>Who do I start Romo or Brady?</p>
+									</div>
+								</li>
+								<li class="receiver">
+									<time datetime="2014-04-14">10/1/14 at 5:02p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Coach John S.</a></strong>
+										<p>Romo – playing Jags who are last against pass.</p>
+									</div>
+								</li>
+								<li class="sender">
+									<time datetime="2014-04-14">10/1/14 at 5:03p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Scott Sloane</a></strong>
+										<p>But doesn’t Romo tend to choke against the Jags?</p>
+									</div>
+								</li>
+								<li class="receiver">
+									<time datetime="2014-04-14">10/1/14 at 5:04p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Coach John S.</a></strong>
+										<p>No, it’s the Steelers defense that’s his achilles heel.</p>
+									</div>
+								</li>
+								<li class="sender">
+									<time datetime="2014-04-14">10/1/14 at 5:05p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Scott Sloane</a></strong>
+										<p>Oh right! Thanks.</p>
+									</div>
+								</li>
+								<li class="receiver">
+									<time datetime="2014-04-14">10/1/14 at 5:06p pst</time>
+									<div class="box">
+										<strong class="name"><a href="">Coach John S.</a></strong>
+										<p>No problem. Let me know of anything else and good luck!</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<form class="message-box add-height-elem">
+						<fieldset>
+							<input type="submit" value="Send" style="background-color:blue" onClick = "showTimerRunningOverlay()">
+							<div class="text">
+								<input type="text">
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+		</div>
+	</div>
+<!-- Timer-Running-Out Overlay starts here -->
+<div class="timer-running-out-overlay container-fluid" id="timer-running-out-overlay1">
+    <div class = "timer-running-overlay">
+        <div id ="overlay-message">
+            <span><h3 id = "timer-running-heading">0:30</h3></span>
+            <div id="closeBtn" class="close_btn" onClick="hideTimerRunningOutOverlay()"></div><!-- end close_btn -->
+            <p id = "Timer-Running-Message" style="text-align:center;margin-bottom: 0px;"><span class="scrollable-text" style="color:white;font-weight:bold;
+                font-style:bold;">Your time is running out</span></p>
+            <div class="call-btn">
+                <a onClick = "showEndCallConfirmationOverlay()"><input id = "EndCall" type="submit" class = "btn-end-call" value="End Call" style="border-radius:5px !important;"/></a><br><br>
+                <a onClick = "showExtendCallConfirmationOverlay()"><input id = "ExtendCall" type="submit" class = "btn-end-call" value="Extend for 5 minutes ($10)" style="border-radius:5px !important;"/></a>
+            </div><!-- end call-btn -->
+        </div><!-- end overlay-message -->
+    </div><!-- end timer-running-overlay -->
+</div> <!-- help container end -->
+
+<!-- End-Call-Confirmation Overlay starts here -->
+<div class="timer-running-out-overlay container-fluid" id="end-call-confirmation-overlay">
+    <div class = "timer-running-overlay">
+        <div id ="overlay-message">
+            <span><h3 id = "timer-running-heading">0:30</h3></span>
+            <div id="closeBtn" class="close_btn" onClick="hideEndCallConfirmation()"></div><!-- end close_btn -->
+            <p id = "Timer-Running-Message" style="text-align:center;margin-bottom: 0px;"><span style="color:white;font-weight:bold;
+                font-style:bold;" class="scrollable-text">Please confirm that you wish to cancel your current chat session.</span></p>
+            <div class="call-btn">
+                <a onClick = "hideEndCallConfirmation()"><input id = "EndCall" type="submit" value="End Call" class = "btn-end-call" style="border-radius:5px !important;transform: none;"/></a><br><br>
+                <a onClick = "hideEndCallConfirmation()"><input id = "ExtendCall" type="submit" class = "btn-end-call" value="Extend for 5 minutes ($5)" style="border-radius:5px !important;"/></a>
+            </div><!-- end call-btn -->
+        </div><!-- end overlay-message -->
+    </div><!-- end timer-running-overlay -->
+</div> <!-- help container end -->
+
+<!-- Extend-Call-Confirmation Overlay starts here -->
+<div class="timer-running-out-overlay container-fluid" id="extend-call-confirmation-overlay">
+    <div class = "timer-running-overlay">
+        <div id ="overlay-message">
+            <span><h3 id = "timer-running-heading">0:30</h3></span>
+            <div id="closeBtn" class="close_btn" onClick="hideExtendCallConfirmation()"></div><!-- end close_btn -->
+            <p id = "Timer-Running-Message" style="text-align:center;margin-bottom: 0px;"><span style="color:white;font-weight:bold;
+                font-style:bold;" class="scrollable-text">Please confirm that you wish to extend your current chat session.</span></p>
+            <div class="call-btn">
+                <a onClick = "hideEndCallConfirmation()"><input id = "EndCall" class = "btn-end-call" type="submit" value="End Call" style="border-radius:5px !important;"/></a><br><br>
+                <a onClick = "hideExtendCallConfirmation()"><input id = "ExtendCall" type="submit" class = "btn-end-call" value="Extend for 5 minutes ($5)" style="border-radius:5px !important;"/></a>
+            </div><!-- end call-btn -->
+        </div><!-- end overlay-message -->
+    </div><!-- end timer-running-overlay -->
+</div> <!-- help container end -->
+
+
+
+</div><!-- end main -->
+</div><!-- end wrapper -->

@@ -1,0 +1,324 @@
+	<!-- main container of all the page elements -->
+	<div id="wrapper" class="purchase-page">
+		<!-- header of the page -->
+		<div ng-include="'app/views/header.html'" ></div>
+		<!-- contain main informative part of the site -->
+		<div id="main">
+			<!-- messages -->
+			<section class="messages">
+                <!-- filter header -->
+				<header class="filter-headerq" style="background: #ffffff;border:2px solid #bbbbbb;line-height:44px;font: 16px 'helveticaneue', Arial, sans-serif;">
+                    <span class="spantotal" >March total: $15
+                        </span>
+                    <span  class="spanall">All-time total: $55</span>
+                </header><!-- end filter-header -->
+				<!-- filter header -->
+				<header class="filter-header">
+                    <a href="#" class="btn-filter by-date">By Date</a>
+                    <a id = "show-conversation" class="btn-filter">All (15)</a>
+                </header><!-- end filter-header -->
+                <div id = "conversation" class = "conversation-popup" style="position:absolute;z-index:1;background-color:#e4e4e4;display:none;width:100%;max-width:1024px;text-align:center;">
+                    <ul>
+                        <li class="incoming all" style = "border:1px; border-bottom-style:solid;line-height:40px; border-bottom-color:#cccccc;">
+                            <a id = "first" ng-click="filterfun('')"  ng-click="filterfun('')" style = "font-family:helvitica;font-size:18px;">
+                                50 purchase
+                            </a>
+                        </li><!-- end first li -->
+                        <li class="incoming call" style = "border:1px; border-bottom-style:solid; line-height:40px;border-bottom-color:#cccccc">
+                            <a id = "first"  ng-click="filterfun('call')" style = "font-family:helvitica;font-size:18px;">
+                               5 purchase
+                            </a>
+                        </li><!-- end incoming call -->
+                        <li class="incoming chat" style = "background-color:none; border:1px;line-height:40px; border-bottom-style:solid; border-bottom-color:#cccccc">
+                            <a id = "first"  ng-click="filterfun('chat')" style = "font-family:helvitica;font-size:18px;">
+                                25 purchase
+                            </a>
+                        </li><!-- end incoming chat -->
+                        <li class="incoming question">
+                            <a id = "first"  ng-click="filterfun('question')" style = "font-family:helvitica;font-size:18px;line-height:40px;">
+                                1 purchase
+                            </a>
+                        </li><!-- end incoming question -->
+                    </ul><!-- end ul -->
+                </div><!-- end conversation-popup -->
+				<div class="scrollable-area">
+					<div class="scroll-holder">
+						<ul>
+                            <li class="{{item.typeStatus}} {{item.type}}" ng-class-odd="''" ng-class-even="'even'" ng-repeat="item in items | filter:filters">
+                                
+                                <div ng-if="item.type == 'call'">
+                                    <a ng-href="#/archive-details-call">
+                                        <strong   ng-class='{online : item.cstatus==1}' class="title">{{item.cName}}</strong>
+                                        <time datetime="2014-04-14">{{item.date}}</time>
+                                    </a>
+                                    <span>{{item.value}}</span>
+                                </div>
+                                <div ng-if="item.type == 'chat'">
+                                    <a ng-href="#/archive-details-chat">
+                                        <strong   ng-class='{online : item.cstatus==1}' class="title">{{item.cName}}</strong>
+                                        <time datetime="2014-04-14">{{item.date}}</time>
+                                    </a>
+                                    <span>{{item.value}}</span>
+                                </div>
+                                <div ng-if="item.type == 'question'">
+                                    <a ng-href="#/archive-details-text">
+                                        <strong   ng-class='{online : item.cstatus==1}' class="title">{{item.cName}}</strong>
+                                        <time datetime="2014-04-14">{{item.date}}</time>
+                                    </a>
+                                    <span>{{item.value}}</span>
+                                </div>
+                                
+                            </li>
+							<!--li class="incoming call">
+								<a href="#/archive-details-call/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">March 3</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="wait chat even">
+								<a href="#/archive-details-chat/">
+									<strong class="title">Coach Ruby S.</strong>
+									<time datetime="2014-04-14">March 1</time>
+								</a>
+                               <span>$10</span>
+							</li>
+							<li class="complete question">
+								<a href="#/archive-details-text/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">February 28</time>
+								</a>
+                                 <span>$10</span>
+							</li>
+							<li class="wait call even">
+								<a href="#/archive-details-call/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">February 27</time>
+								</a>
+                                 <span>$10</span>
+							</li>
+							<li class="wait question">
+								<a href="#/archive-details-text/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">February 26</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="incoming chat even">
+								<a href="#/archive-details-chat/">
+									<strong class="title">Coach Ruby S.</strong>
+									<time datetime="2014-04-14">February 25</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="incoming question">
+								<a href="#/archive-details-text/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">February 24</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="complete call even">
+								<a href="#/archive-details-call/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">February 23</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="complete chat">
+								<a href="#/archive-details-chat/">
+									<strong class="title">Coach Ruby S.</strong>
+									<time datetime="2014-04-14">March 1</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="incoming call">
+								<a href="#/archive-details-call/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">March 3</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="wait chat even">
+								<a href="#/archive-details-chat/">
+									<strong class="title">Coach Ruby S.</strong>
+									<time datetime="2014-04-14">March 1</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="complete question">
+								<a href="#/archive-details-text/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">February 28</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="wait call even">
+								<a href="#/archive-details-call/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">February 27</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="wait question">
+								<a href="#/archive-details-text/">
+									<strong class="title online">Coach John S.</strong>
+									<time datetime="2014-04-14">February 26</time>
+								</a>
+                                <span>$10</span>
+							</li>
+							<li class="incoming chat even">
+								<a href="#/archive-details-chat/">
+									<strong class="title">Coach Ruby S.</strong>
+									<time datetime="2014-04-14">February 25</time>
+								</a>
+                                <span>$10</span>
+							</li-->
+						</ul>
+					</div>
+				</div>
+			</section>
+            
+            
+		
+		<!-- footer of the page -->
+		<footer id="footer">
+			<!-- info -->
+			<div class="info" style="background:#ffff;">
+				<div class="info-holder">
+					
+                    <input type="submit" onClick = "showTimerRunningOverlay()" id = "sendreceipt"  value="Send me a receipt" class = "btn-end-call" style="background-color: #0066ff;
+                        height: 40px;
+                        display: block;
+                        margin: 0 auto;
+                        position: relative;
+                        float: none;
+                        text-transform: none;
+                        line-height: 40px;
+                        border-radius: 6px !important;
+                        margin: 1% auto;
+                        width: 90%;">
+					
+				</div>
+			</div>
+		</footer>
+        
+        <!-- Timer-Running-Out Overlay starts here -->
+		<div class="timer-running-out-overlay container-fluid" id="timer-running-out-overlay1">
+			<div class = "timer-running-overlay">
+				<div id ="overlay-message">
+					
+					<div id="closeBtn" class="close_btn" onClick="hideTimerRunningOutOverlay()"></div><!-- end close_btn -->
+					<p id = "Purchase-Running-Message" style="text-align:center;margin-bottom: 0px;"><span class="scrollable-text" style="color:white;font-weight:bold;
+                        font-style:bold;font-size:18px;">
+                        <div style="color:white;font-weight:bold;
+                            font-style:bold;font-size:18px;">We'll send you a receipt to </div>
+                        <div style="color:white;font-weight:bold;
+                            font-style:bold;font-size:18px;">the email address you used </div>
+                        <div style="color:white;font-weight:bold;
+                            font-style:bold;font-size:18px;"> to register with</div></span></p>
+					<div class="purchaseover-btn">
+						<a onClick = "showEndCallConfirmationOverlay()"><input id = "Senddays" type="submit" class = "btn-end-call" value="Send for the last 30 days" style="font-size:15px;border-radius:5px !important;width:90%;background-color: #0066ff;"/></a><br><br>
+						<a onClick = "showEndCallConfirmationOverlay()"><input id = "Sendpurchase" type="submit" class = "btn-end-call" value="Send entire purhase history" style="border-radius:5px !important;width:90%;font-size:15px;background-color: #0066ff;"/></a>
+					</div><!-- end call-btn -->
+				</div><!-- end overlay-message -->
+			</div><!-- end timer-running-overlay -->
+		</div> <!-- help container end -->
+		
+		<!-- End-Call-Confirmation Overlay starts here -->
+		<div class="timer-running-out-overlay container-fluid" id="end-call-confirmation-overlay">
+			<div class = "timer-running-overlay">
+				<div id ="overlay-message">
+					
+					<div id="closeBtn" class="close_btn" onClick="hideEndCallConfirmation()"></div><!-- end close_btn -->
+					<p id = "Purchase1-Running-Message" style="text-align:center;margin-bottom: 0px;"><span class="scrollable-text" style="color:white;font-weight:bold;
+                        font-style:bold;font-size:18px;">
+                        <div style="color:white;font-weight:bold;
+                            font-style:bold;font-size:18px;">Purchase history sent. </div>
+                       </span></p>
+					<div class="purchaseover-btn" >
+					<div  style="visibility: hidden;height:44px;">&nbsp;</div>
+						<br><br>
+						<a onClick = "hideEndCallConfirmation()"><input id = "Sendpurchase" type="submit" class = "btn-end-call" value="Close" style="border-radius:5px !important;width:90%;background-color: #CC0000;font-size:15px;"/></a>
+					</div><!-- end call-btn -->
+				</div><!-- end overlay-message -->
+			</div><!-- end timer-running-overlay -->
+		</div> <!-- help container end -->
+
+	</div>
+	</div>
+	<script type="text/javascript" src="bower/jmain.js"></script>
+
+<script type="text/javascript">
+   // jQuery(function(){
+	flag=0;
+    
+	//$('#show-conversation')
+    //$('.purchase-page #show-conversation').on('click',function(e){ alert("hi");
+                                              $('.purchase-page #show-conversation').on('click',function(e){
+                                                                                       
+                                                                                        if(flag==0){
+                                                                                        $(".purchase-page #conversation").slideDown();
+                                                                                        $(".purchase-page #show-conversation style").remove();
+                                                                                        $('.purchase-page #show-conversation').append('<style>.filter-header #show-conversation:after{border-width: 0px 8.5px 11px 8.5px;border-color: transparent transparent #026876 transparent;}</style>');
+                                                                                        flag=1;
+                                                                                        }
+                                                                                        
+                                                                                        else
+                                                                                        {
+                                                                                        $(".purchase-page #conversation").slideUp();
+                                                                                        $(".purchase-page #show-conversation style").remove();
+                                                                                        $('.purchase-page #show-conversation').append('<style>.filter-header #show-conversation:after{border-width: 11px 8.5px 0 8.5px;border-color: #026876 transparent transparent transparent;}</style>');
+                                                                                        flag = 0;
+                                                                                        }
+                                                                                        });
+                                 
+    </script>
+
+<script type="text/javascript">
+	//showMsg();
+    
+	/*$(document).ready(function(){
+     showMsg();
+     });*/
+//alert(window.devicePixelRatio);
+flag=0;
+
+function showTimerRunningOverlay() {
+    var msg = document.getElementById('timer-running-out-overlay1');
+    msg.style.display = 'block';
+}
+
+function hideTimerRunningOutOverlay(){
+    //  alert("In hideTimerRunningOutOverlay()");
+    $('#timer-running-out-overlay1').slideUp();
+    // window.location("#/callD3-A/");
+}
+
+function showEndCallConfirmationOverlay() {
+    hideTimerRunningOutOverlay();
+    // alert("In showEndCallConfirmationOverlay()");
+    var msg = document.getElementById('end-call-confirmation-overlay');
+    msg.style.display = 'block';
+}
+
+function hideEndCallConfirmation() {
+    //  alert("In hideEndCallConfirmation()");
+    hideTimerRunningOutOverlay();
+    $('#end-call-confirmation-overlay').slideUp();
+    $(location).attr('href', '#/purchase-history/');
+}
+
+function showExtendCallConfirmationOverlay() {
+    hideTimerRunningOutOverlay();
+    
+    var msg = document.getElementById('extend-call-confirmation-overlay');
+    msg.style.display = 'block';
+}
+
+function hideExtendCallConfirmation() {
+    hideTimerRunningOutOverlay();
+    // hideEndCallConfirmation();
+    $('#extend-call-confirmation-overlay').slideUp();
+}
+</script>

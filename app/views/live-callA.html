@@ -1,0 +1,104 @@
+<!-- main container of all the page elements -->
+<div id="wrapper" class="live-calla-page">
+
+	<!-- header of the page -->
+    
+	
+	<div ng-include="'app/views/header.html'" ></div>
+		
+	<!-- contain main informative part of the site -->
+	<div id="main">
+		<!-- live chat -->
+		<section class="coachs live-chat">
+			<div class="author">
+				<div class="box">
+					<div class="fav active">
+						<a href="#">star</a>
+						<strong>FAV</strong>
+					</div>
+					<div class="img-holder">
+						<span picture-fill data-alt="image description">
+							<span pf-src="images/img1.jpg" ></span>
+							<span pf-src="images/img1-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+							<span pf-src="images/img1-s.jpg" data-media="(max-width:600px)" ></span>
+							<span pf-src="images/img1-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+							<!--[if (lt IE 9) & (!IEMobile)]>
+								<img src="images/img1.jpg" alt="image description">
+							<![endif]-->
+							<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+							<noscript><img src="images/img2.jpg" alt="image description"></noscript>
+						</span>
+					</div><!-- end img-holder -->
+					<div class="text">
+						<strong class="title"><a href="#">Coach John S.</a></strong>
+						<div class="status active">
+							<span class="online">ONLINE - AVAILABLE</span>
+							<span class="offline">OFFLINE</span>
+						</div><!-- end status active -->
+					</div><!-- end text -->
+				</div><!-- end box -->
+			</div><!-- end author -->
+			<!-- live chat box -->
+			<div class="call-box">
+				<div class="scrollable-area">
+					<div class="scroll-text">
+						<p class = "scrollable-text">$5 will get you 5 minutes with the Coach.  Your 10 minute call will begin as soon as the Coach is on the line.</p>
+						<p class = "scrollable-text">You will be notified when time is running out & you will be asked if you would like to extend the session for an additional fee.</p>
+					</div><!- end scroll-text -->
+				</div><!-- end scrollable-area -->
+				<form  class="message-box1 add-height-elem">
+					<fieldset>
+                    <div id="end-call-popup"  class = "btn-end-call" style="bottom:-46px;font-weight:normal;">
+                    <div id = "spend-money" class = "Inner">Spend $5 for 5 minutes?</div>
+                    <div id = "cancel" class = "Inner">Cancel</div>
+                    </div><!-- end end-call-popup -->
+                    <input type="submit" id = "call-now-btn"  value="Call Now" class = "btn-end-call" style="background-color:#0066ff;height:46px;display:block;margin:0 auto;position:relative;float:none;text-transform:none;line-height:46px;">
+					</fieldset>
+				</form><!-- end form -->
+			</div><!-- end call-box -->
+		</section><!-- end coachs live-chat -->
+		<!--footer id="footer">
+			<form action="#" id = "call-coach" class="call-coach">
+				<fieldset>
+					<input class = "btn-call-now" type="submit" value="Call Now" style="background-color:blue;">
+				</fieldset>
+			</form>
+		</footer--><!-- end footer -->
+	</div><!-- end main -->	
+</div><!-- end wrapper -->
+
+<script type="text/javascript" src="bower/jmain.js"></script>
+<script type="text/javascript" >
+flag=0;
+
+$('#call-now-btn').on('click',function(e){
+//alert("Inside function");
+if(flag==0){
+//alert("Inside if");
+$("#end-call-popup").show().animate({
+top : '0px',
+}, 300);    flag=1;    }
+else
+{
+//alert("Indside else");
+$("#end-call-popup").show().animate({
+top : '46px',
+}, 600,function (){flag=0;
+// $("#moving").hide();
+});
+
+}
+});
+
+$('#cancel').on('click', function(e) {
+$("#end-call-popup").show().animate({
+top: '46px',
+}, 600 );
+});
+
+$('#spend-money').on('click', function(e) {
+$(location).attr('href', '#/callD3-B/');
+});
+
+</script>
+

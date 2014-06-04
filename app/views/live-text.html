@@ -1,0 +1,66 @@
+	<!-- main container of all the page elements -->
+	<div id="wrapper" class="live-text-page">
+		<!-- header of the page -->
+		<div ng-include="'app/views/header.html'" ></div>
+		<!-- contain main informative part of the site -->
+		<div id="main">
+			<!-- live chat -->
+			<section class="coachs live-chat">
+				<div class="author">
+					<div class="box">
+						<div class="fav active">
+							<a href="#">star</a>
+							<strong>FAV</strong>
+						</div>
+						<div class="img-holder">
+							<span picture-fill data-alt="image description">
+								<span pf-src="images/img1.jpg" ></span>
+								<span pf-src="images/img1-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+								<span pf-src="images/img1-s.jpg" data-media="(max-width:600px)" ></span>
+								<span pf-src="images/img1-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<img src="images/img1.jpg" alt="image description">
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript><img src="images/img2.jpg" alt="image description"></noscript>
+							</span>
+						</div>
+						<div class="text">
+							<strong class="title"><a href="#">Coach John S.</a></strong>
+							<div class="status active">
+								<span class="online">ONLINE - AVAILABLE</span>
+								<span class="offline">OFFLINE</span>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="end-setion">End Session</a>
+				</div>
+				<!-- live chat box -->
+				<div class="chat-box">
+					<div class="time-remain active">
+						
+					</div>
+					<div class="scrollable-area">
+						<div class="scroll-holder">
+							<p class = "scrollable-text">New Users, First Text is FREE!</p>
+							 
+							<p class = "scrollable-text">Text a Coach at anytime for just $1 per text.</p>
+							 
+							<p class = "scrollable-text">There is no limit on the amount of texts you can send.  The Coach will have 24 – 48 hours to respond to your texts.</p>
+							
+							
+						</div>
+					</div>
+					<form action="#/textD1-A/" class="message-box add-height-elem">
+						<fieldset>
+							<input type="submit" value="Send" style="background-color:blue;text-transform:none;">
+							<div class="text">
+								<input type="text">
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="bower/jmain.js"></script>
