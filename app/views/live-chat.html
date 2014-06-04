@@ -1,0 +1,109 @@
+	<!-- main container of all the page elements -->
+	<div id="wrapper" class="live-chat-page">
+		<!-- header of the page -->
+        <div ng-include="'app/views/header.html'" ></div>
+
+		<!-- contain main informative part of the site -->
+		<div id="main">
+			<!-- live chat -->
+			<section class="coachs live-chat">
+				<div class="author">
+					<div class="box">
+						<div class="fav active">
+							<a href="#">star</a>
+							<strong>FAV</strong>
+						</div>
+						<div class="img-holder">
+							<span picture-fill data-alt="image description">
+								<span pf-src="images/img1.jpg" ></span>
+								<span pf-src="images/img1-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+								<span pf-src="images/img1-s.jpg" data-media="(max-width:600px)" ></span>
+								<span pf-src="images/img1-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<img src="images/img1.jpg" alt="image description">
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript><img src="images/img2.jpg" alt="image description"></noscript>
+							</span>
+						</div>
+						<div class="text">
+							<strong class="title"><a href="#">Coach John S.</a></strong>
+							<div class="status active">
+								<span class="online">ONLINE - AVAILABLE</span>
+								<span class="offline">OFFLINE</span>
+							</div>
+						</div>
+					</div>
+					<a onClick = "showend()" class="end-setion">End Session</a>
+				</div>
+				<!-- live chat box -->
+				<div class="chat-box">
+					<div class="time-remain active">
+						<time datetime="2014-04-14">Time Remaining = <span>3:46</span></time>
+					</div>
+					<div class="scrollable-area">
+						<div class="scroll-holder">
+							<p class = "scrollable-text">Enter your question in the text field  below.</p>
+							 
+							<p class = "scrollable-text">Your 5 minute Session Will Begin after you receive your first response from the coach.</p>
+							 
+							<p class = "scrollable-text">You will be notified when time is running out & will be asked if you would like to extend the session for an additional fee.</p>
+							
+							
+						</div>
+					</div>
+					<form  class="message-box add-height-elem">
+						<fieldset>
+							
+                            
+                            <input id = "chat-now-btn" type="submit" value="Send" style="background-color:blue">
+                            <div class="text" style = "padding: 5px 0px;">
+                            <input type="text"/>
+                            <div id="end-chat-popup" class = "chat-popup" style="bottom:38px;">
+                                <div id = "spend-money" class = "Inner">Spend $5 for 5 mins?</div>
+                                <div id = "cancel" class = "Inner">Cancel</div>
+                            </div>
+                        </div>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="bower/jmain.js"></script>
+    
+   <script type="text/javascript">
+   
+   
+   
+   function showend() {
+   flagchata=1;
+    $(location).attr('href', '#/chatD2-A/');
+   }
+   flag=0;
+   $('#chat-now-btn').on('click',function(e){
+                         if(flag==0){
+                         $("#end-chat-popup").slideDown();
+                         
+                         flag=1;
+                         }
+                         
+                         else
+                         {
+                         $("#end-chat-popup").slideUp();
+                         
+                         flag = 0;
+                             }
+                         });
+                         
+                         $('#cancel').on('click', function(e) {
+                                         $("#end-chat-popup").slideUp();
+                                       });
+   
+   $('#spend-money').on('click', function(e) {
+                        $(location).attr('href', '#/chatD2-A/');
+                        });
+   
+   </script>
+   
+    
