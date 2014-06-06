@@ -14,39 +14,33 @@
 				</header>
 				<div class="scrollable-area">
 					<div class="scroll-holder">
-						<article>
+						<article ng-repeat="item in items">
 							<div class="box">
 								<div class="alignleft">
 									<span picture-fill data-alt="image description">
-										<span pf-src="images/img1.jpg" ></span>
-										<span pf-src="images/img1-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-										<span pf-src="images/img1-s.jpg" data-media="(max-width:600px)" ></span>
-										<span pf-src="images/img1-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
+										<span pf-src="images/img{{item.id}}.jpg" ></span>
+										<span pf-src="images/img{{item.id}}-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+										<span pf-src="images/img{{item.id}}-s.jpg" data-media="(max-width:600px)" ></span>
+										<span pf-src="images/img{{item.id}}-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
 										<!--[if (lt IE 9) & (!IEMobile)]>
 											<img src="images/img1.jpg" alt="image description">
 										<![endif]-->
 										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="images/img2.jpg" alt="image description"></noscript>
+										<noscript><img src="images/img{{item.id}}.jpg" alt="image description"></noscript>
 									</span>
 								</div>
 								<div class="text">
-									<div class="fav">
+									<div class="fav" ng-class='{active : item.cstatus==1}'>
 										<a href="#">star</a>
 										<strong>FAV</strong>
 									</div>
-									<strong class="title"><a href="#">Coach John S.</a></strong>
+									<strong class="title"><a href="#">{{item.cName}}</a></strong>
 									<div class="star-rating">
-										<span picture-fill data-alt="image description">
-											<span pf-src="images/4star.png" ></span>
-											<span pf-src="images/4star-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-											<!--[if (lt IE 9) & (!IEMobile)]>
-												<img src="images/4star.png" alt="image description">
-											<![endif]-->
-											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-											<noscript><img src="images/4star.png" alt="image description"></noscript>
-										</span>
+										
+                                        <img src="images/{{item.startype}}star.png" alt="image description">
+                                       
 									</div>
-									<div class="status active">
+									<div class="status" ng-class='{active : item.cstatus==1}'>
 										<span class="online">ONLINE - AVAILABLE</span>
 										<span class="offline">OFFLINE</span>
 									</div>
@@ -55,252 +49,7 @@
 							</div>
 							<a href="#/coach-details/" class="more">More about this coach</a>
 						</article>
-						<article>
-							<div class="box">
-								<div class="alignleft">
-									<span picture-fill data-alt="image description">
-										<span pf-src="images/img2.jpg" ></span>
-										<span pf-src="images/img2-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-										<span pf-src="images/img2-s.jpg" data-media="(max-width:600px)" ></span>
-										<span pf-src="images/img2-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<img src="images/img2.jpg" alt="image description">
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="images/img2.jpg" alt="image description"></noscript>
-									</span>
-								</div>
-								<div class="text">
-									<div class="fav active">
-										<a href="#">star</a>
-										<strong>FAV</strong>
-									</div>
-									<strong class="title"><a href="#">Coach Ruby S.</a></strong>
-									<div class="star-rating">
-										<span picture-fill data-alt="image description">
-											<span pf-src="images/5star.png" ></span>
-											<span pf-src="images/5star-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-											<!--[if (lt IE 9) & (!IEMobile)]>
-												<img src="images/5star.png" alt="image description">
-											<![endif]-->
-											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-											<noscript><img src="images/5star.png" alt="image description"></noscript>
-										</span>
-									</div>
-									<div class="status">
-										<span class="online">ONLINE - AVAILABLE</span>
-										<span class="offline">OFFLINE</span>
-									</div>
-									<p>Won FFPC high stakes fantasy football (out of 1,200 teams) in 2013.</p>
-								</div>
-							</div>
-							<a href="#/coach-details/" class="more">More about this coach</a>
-						</article>
-						<article>
-							<div class="box">
-								<div class="alignleft">
-									<span picture-fill data-alt="image description">
-										<span pf-src="images/img3.jpg" ></span>
-										<span pf-src="images/img3-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-										<span pf-src="images/img3-s.jpg" data-media="(max-width:600px)" ></span>
-										<span pf-src="images/img3-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<img src="images/img3.jpg" alt="image description">
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="images/img3.jpg" alt="image description"></noscript>
-									</span>
-								</div>
-								<div class="text">
-									<div class="fav">
-										<a href="#">star</a>
-										<strong>FAV</strong>
-									</div>
-									<strong class="title"><a href="#">Coach Matthew M.</a></strong>
-									<div class="star-rating">
-										<span picture-fill data-alt="image description">
-											<span pf-src="images/4star.png" ></span>
-											<span pf-src="images/4star-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-											<!--[if (lt IE 9) & (!IEMobile)]>
-												<img src="images/4star.png" alt="image description">
-											<![endif]-->
-											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-											<noscript><img src="images/4star.png" alt="image description"></noscript>
-										</span>
-									</div>
-									<div class="status active">
-										<span class="online">ONLINE - AVAILABLE</span>
-										<span class="offline">OFFLINE</span>
-									</div>
-									<p>Won FFPC high stakes fantasy football (out of 1,200 teams) in 2013. Lorem ipsum second line of text shown here.</p>
-								</div>
-							</div>
-							<a href="#/coach-details/" class="more">More about this coach</a>
-						</article>
-						<article>
-							<div class="box">
-								<div class="alignleft">
-									<span picture-fill data-alt="image description">
-										<span pf-src="images/img4.jpg" ></span>
-										<span pf-src="images/img4-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-										<span pf-src="images/img4-s.jpg" data-media="(max-width:600px)" ></span>
-										<span pf-src="images/img4-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<img src="images/img4.jpg" alt="image description">
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="images/img4.jpg" alt="image description"></noscript>
-									</span>
-								</div>
-								<div class="text">
-									<div class="fav">
-										<a href="#">star</a>
-										<strong>FAV</strong>
-									</div>
-									<strong class="title"><a href="#">Coach Elsa A.</a></strong>
-									<div class="star-rating">
-										<span picture-fill data-alt="image description">
-											<span pf-src="images/4star.png" ></span>
-											<span pf-src="images/4star-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-											<!--[if (lt IE 9) & (!IEMobile)]>
-												<img src="images/4star.png" alt="image description">
-											<![endif]-->
-											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-											<noscript><img src="images/4star.png" alt="image description"></noscript>
-										</span>
-									</div>
-									<div class="status active">
-										<span class="online">ONLINE - AVAILABLE</span>
-										<span class="offline">OFFLINE</span>
-									</div>
-									<p>Won FFPC high stakes fantasy football (out of 1,200 teams) in 2013. Lorem ipsum second line of text shown here.</p>
-								</div>
-							</div>
-							<a href="#/coach-details/" class="more">More about this coach</a>
-						</article>
-						<article>
-							<div class="box">
-								<div class="alignleft">
-									<span picture-fill data-alt="image description">
-										<span pf-src="images/img1.jpg" ></span>
-										<span pf-src="images/img1-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-										<span pf-src="images/img1-s.jpg" data-media="(max-width:600px)" ></span>
-										<span pf-src="images/img1-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<img src="images/img1.jpg" alt="image description">
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="images/img2.jpg" alt="image description"></noscript>
-									</span>
-								</div>
-								<div class="text">
-									<div class="fav">
-										<a href="#">star</a>
-										<strong>FAV</strong>
-									</div>
-									<strong class="title"><a href="#">Coach John S.</a></strong>
-									<div class="star-rating">
-										<span picture-fill data-alt="image description">
-											<span pf-src="images/4star.png" ></span>
-											<span pf-src="images/4star-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-											<!--[if (lt IE 9) & (!IEMobile)]>
-												<img src="images/4star.png" alt="image description">
-											<![endif]-->
-											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-											<noscript><img src="images/4star.png" alt="image description"></noscript>
-										</span>
-									</div>
-									<div class="status active">
-										<span class="online">ONLINE - AVAILABLE</span>
-										<span class="offline">OFFLINE</span>
-									</div>
-									<p>Won FFPC high stakes fantasy football (out of 1,200 teams) in 2013.</p>
-								</div>
-							</div>
-							<a href="#/coach-details/" class="more">More about this coach</a>
-						</article>
-						<article>
-							<div class="box">
-								<div class="alignleft">
-									<span picture-fill data-alt="image description">
-										<span pf-src="images/img2.jpg" ></span>
-										<span pf-src="images/img2-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-										<span pf-src="images/img2-s.jpg" data-media="(max-width:600px)" ></span>
-										<span pf-src="images/img2-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<img src="images/img2.jpg" alt="image description">
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="images/img2.jpg" alt="image description"></noscript>
-									</span>
-								</div>
-								<div class="text">
-									<div class="fav active">
-										<a href="#">star</a>
-										<strong>FAV</strong>
-									</div>
-									<strong class="title"><a href="#">Coach Ruby S.</a></strong>
-									<div class="star-rating">
-										<span picture-fill data-alt="image description">
-											<span pf-src="images/5star.png" ></span>
-											<span pf-src="images/5star-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-											<!--[if (lt IE 9) & (!IEMobile)]>
-												<img src="images/5star.png" alt="image description">
-											<![endif]-->
-											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-											<noscript><img src="images/5star.png" alt="image description"></noscript>
-										</span>
-									</div>
-									<div class="status">
-										<span class="online">ONLINE - AVAILABLE</span>
-										<span class="offline">OFFLINE</span>
-									</div>
-									<p>Won FFPC high stakes fantasy football (out of 1,200 teams) in 2013.</p>
-								</div>
-							</div>
-							<a href="#/coach-details/" class="more">More about this coach</a>
-						</article>
-						<article>
-							<div class="box">
-								<div class="alignleft">
-									<span picture-fill data-alt="image description">
-										<span pf-src="images/img3.jpg" ></span>
-										<span pf-src="images/img3-2x.jpg" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-										<span pf-src="images/img3-s.jpg" data-media="(max-width:600px)" ></span>
-										<span pf-src="images/img3-s-2x.jpg" data-media="(max-width:600px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:600px) and (min-resolution:144dpi)" ></span>
-										<!--[if (lt IE 9) & (!IEMobile)]>
-											<img src="images/img3.jpg" alt="image description">
-										<![endif]-->
-										<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-										<noscript><img src="images/img3.jpg" alt="image description"></noscript>
-									</span>
-								</div>
-								<div class="text">
-									<div class="fav">
-										<a href="#">star</a>
-										<strong>FAV</strong>
-									</div>
-									<strong class="title"><a href="#">Coach Matthew M.</a></strong>
-									<div class="star-rating">
-										<span picture-fill data-alt="image description">
-											<span pf-src="images/4star.png" ></span>
-											<span pf-src="images/4star-2x.png" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-											<!--[if (lt IE 9) & (!IEMobile)]>
-												<img src="images/4star.png" alt="image description">
-											<![endif]-->
-											<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-											<noscript><img src="images/4star.png" alt="image description"></noscript>
-										</span>
-									</div>
-									<div class="status active">
-										<span class="online">ONLINE - AVAILABLE</span>
-										<span class="offline">OFFLINE</span>
-									</div>
-									<p>Won FFPC high stakes fantasy football (out of 1,200 teams) in 2013. Lorem ipsum second line of text shown here.</p>
-								</div>
-							</div>
-							<a href="#/coach-details/" class="more">More about this coach</a>
-						</article>
+					
 						
 					</div>
 				</div>

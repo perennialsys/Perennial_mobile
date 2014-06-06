@@ -46,7 +46,10 @@ app.controller('messagesController', ['$scope', '$location',function($scope, $lo
                                       
                                      
 
-                                      
+                                      $scope.toggleAnimation = function (
+                                      ) {
+                                      $(location).attr('href', '#/'+$scope.link+'/');
+                                      };
                                       
                                       
                                              }]);

@@ -12,5 +12,8 @@ app.controller('live-textController', ['$scope', function($scope) {
                                        }
                                        
                                        
-                                       
+                                       $scope.toggleAnimation = function (
+                                       ) {
+                                       $(location).attr('href', '#/'+$scope.link+'/');
+                                       };
                                        }]);

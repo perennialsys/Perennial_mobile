@@ -11,6 +11,9 @@ app.controller('coach-detailsController', ['$scope', function($scope) {
                                                       }, 350);
                                              }
                                              
-                                             
-                                             
+                                           $scope.toggleAnimation = function (
+                                           ) {
+                                           $(location).attr('href', '#/'+$scope.link+'/');
+                                           };
+                                           
                                              }]);

@@ -1,7 +1,7 @@
 app.controller('live-callController', ['$scope', function($scope) {
                                            
                                            $scope.title = 'Live Call';
-                                           $scope.link="coach-details";
+                                         //  $scope.link="coach-details";
                                            $scope.animationClass = "slide";
                                            
                                            $scope.toggleAnimation = function() {
@@ -10,7 +10,8 @@ app.controller('live-callController', ['$scope', function($scope) {
                                                     $scope.animationClass = "slide";
                                                     }, 350);
                                            }
-                                           
-                                           
-                                           
+                                       $scope.toggleAnimation = function (
+                                       ) {
+                                       $(location).attr('href', '#/'+$scope.link+'/');
+                                       };
                                            }]);

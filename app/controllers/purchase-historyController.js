@@ -46,7 +46,10 @@ app.controller('purchase-historyController', ['$scope', function($scope) {
                                               $(".purchase-page #show-conversation style").remove();
                                               $('.purchase-page #show-conversation').append('<style>.filter-header #show-conversation:after{border-width: 11px 8.5px 0 8.5px;border-color: #026876 transparent transparent transparent;}</style>');
                                               };
-                                             
+                                              $scope.toggleAnimation = function (
+                                              ) {
+                                              $(location).attr('href', '#/'+$scope.link+'/');
+                                              };
                                             
                                              
                                              }]);

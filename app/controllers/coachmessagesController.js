@@ -45,7 +45,10 @@ app.controller('coachmessagesController', ['$scope', '$location',function($scope
                                       };
                                       
                                       
-                                      
+                                           $scope.toggleAnimation = function (
+                                           ) {
+                                           $(location).attr('href', '#/'+$scope.link+'/');
+                                           };
                                       
                                       
                                       

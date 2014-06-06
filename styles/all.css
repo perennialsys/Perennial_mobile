@@ -461,7 +461,7 @@ background-image: url('../images/sign/cancel@2x.png');
 	height: 55px;
 	background: #05b2c7;
 	margin: 0 auto;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -824,13 +824,60 @@ background-image: url('../images/sign/cancel@2x.png');
 	margin: -6px 0 0;
 	background: url(../images/sprite.png) 0 -452px;
 }
+
+
+.archive-detailtext-page #footer .info{
+font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	background: #eeecec;
+}
+
+
+.archive-detailchat-page #footer .info{
+font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	background: #eeecec;
+}
+
+.archive-detailcall-page #footer .info{
+font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	background: #eeecec;
+}
+.purchase-page #footer .info{
+font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	background: #eeecec;
+}
+
+.coachmessages-page #footer .info{
+font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	background: #eeecec;
+}
+
+.messages-page #footer .info{
+font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	background: #eeecec;
+}
+
+
 /* info styled */
 #footer .info {
 	font-size: 20px;
 	line-height: 30px;
 	text-align: center;
-	background: #eeecec;
+	/*background: #eeecec; */
+    background: #FFC707;
 }
+
 #footer .info-holder {
 	max-width: 1024px;
 	margin: 0 auto;
@@ -838,10 +885,15 @@ background-image: url('../images/sign/cancel@2x.png');
 }
 #footer .info p { margin: 0; }
 #footer .info p strong {
-	color: #026976;
+	/*color: #026976;*/
+    color: #333333;
+
 	font-weight: normal;
 }
-#footer .info p a { color: #ff8814; }
+#footer .info p a { 
+/*color: #ff8814; */
+color: #333333;
+}
 /* contact options styled */
 .contact {
 	text-align: center;
@@ -1206,7 +1258,7 @@ background-image: url('../images/sign/cancel@2x.png');
 	position: relative;
 	margin: 0 10px 0 0;
 }
-.messages .title:hover { text-decoration: underline; }
+.messages .title:hover { text-decoration: none; }
 .messages .title.online:after {
 	width: 10px;
 	height: 10px;
@@ -1270,6 +1322,8 @@ background-image: url('../images/sign/cancel@2x.png');
 .scrollable-area-wrapper {
 	position: relative;
 	overflow: hidden;
+
+    -webkit-overflow-scrolling: touch;
 	width: 100% !important;
 
 }
@@ -1315,7 +1369,7 @@ background-image: url('../images/sign/cancel@2x.png');
 	height: 550px;
 	position: relative;
 }
-.scroll-holder { overflow: hidden; }
+.scroll-holder { overflow: hidden; -webkit-overflow-scrolling:touch;}
 .live-chat .scrollable-area-wrapper .hscrollbar,
 .live-chat .scrollable-area-wrapper .vscrollbar { width: 11px; }
 
@@ -2236,11 +2290,11 @@ border-radius: 5px !important;
 	#Timer-Running-Message {
 		text-align: center;
 		margin-bottom: 0px;
-		margin-top: 17%;
+		margin-top: 16%;
 	}
 	
 	.call-btn {
-		margin-top: 20%;
+		margin-top: 19%;
 	}
     
     
@@ -2311,16 +2365,16 @@ line-height: 44px;
  #Purchase1-Running-Message {
 		 text-align: center;
 	 	margin-bottom: 0px;
-	 	margin-top: 28%;
+	 	margin-top: 25%;
 	 }
 	#Purchase-Running-Message
 	{
 	 text-align: center;
 	 margin-bottom: 0px;
-	 margin-top: 21%;
+	 margin-top: 18%;
 	}
 	.purchaseover-btn {
-		margin-top: 30%;
+		margin-top: 28%;
 	}
 
 }
@@ -2337,16 +2391,16 @@ line-height: 44px;
 	 #Purchase1-Running-Message {
 		 text-align: center;
 	 	margin-bottom: 0px;
-	 	margin-top: 27%;
+	 	margin-top: 24%;
 	 }
 	#Purchase-Running-Message
 	{
 	 text-align: center;
 	 margin-bottom: 0px;
-	 margin-top: 20%;
+	 margin-top: 16%;
 	}
 	.purchaseover-btn {
-		margin-top: 9%;
+		margin-top: 7%;
 	}
     
     #Timer-Running-Message {
@@ -2618,7 +2672,7 @@ overflow: auto;
 #spend-money {
     //word-spacing: -2px; 
 
-    line-height: 35px;
+    line-height: 46px;
     float: left;
     width: 55%;
     background-color: lightgray;
@@ -2626,7 +2680,7 @@ overflow: auto;
 
 #cancel {
     background: #853536;
-    line-height: 35px;
+    line-height: 46px;
     float: right;
     width: 45%;
     color: white;
