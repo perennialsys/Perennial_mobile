@@ -89,9 +89,7 @@ function initBlocksHeight(){
         if(page==".archive-detailtext-page" || page==".archive-detailchat-page" || page==".archive-detailcall-page")
             addHeight=addHeight+10;
         
-        if(page==".coach-box-page")
-        scrollAreas=jQuery('.coach-box-page .coachs .scrollable-area');
-       
+      
         scrollAreas.each(function(){
                          var scrollArea = jQuery(this);
                         
@@ -99,7 +97,7 @@ function initBlocksHeight(){
                          
                          top=scrollArea.offset().top;
                          
-                         
+                       //  alert(win.height() +"  "+win.width());
                          
                          scrollArea.height(win.height() - top - footer.outerHeight() - addHeight );
                          

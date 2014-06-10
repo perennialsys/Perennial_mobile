@@ -1,5 +1,7 @@
 <!--script type="text/javascript" src="bower/main.js"></script-->
 
+
+
 <script type="text/javascript">
 	//showMsg();
     var flag=0;
@@ -36,9 +38,7 @@ function showMsg(){
     
 }
 
-function login(){
-    $(location).attr('href', '#/welcome/');
-}
+
 </script>
 
 <div class="help-overlay container-fluid" id="helpLogin-overlay" >
@@ -81,9 +81,9 @@ function login(){
 		<!-- login form -->
 		<form  class="login-form">
 			<fieldset>
-				<input type="email" placeholder="Email">
-				<input type="password" placeholder="Password">
-				<input type="submit" value="Login"  onClick="login()">
+				<input id="loginemail" type="email" placeholder="Email">
+				<input id="loginpass"  type="password" placeholder="Password">
+				<input type="submit" value="Login"  ng-click="login()">
 				<a  class="forgot" onClick="showMsg()">Forgot Username/Password?</a>
 			</fieldset>
 		</form>
@@ -91,7 +91,7 @@ function login(){
 		<div id="footer">
 			<!-- for signup -->
 			<div class="signup">
-				<p><a href="#/signup/">Don't have an FCS account? Sign-Up</a></p>
+				<p><a href="#/signup/"><span style="color:white;">Don't have an FCS account? </span>Sign-Up</a></p>
 			</div>
 		</div>
 	</div>

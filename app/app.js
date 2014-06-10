@@ -5,7 +5,7 @@
     app.config(function($routeProvider) {
         $routeProvider
             .when('/', {
-            //    controller: '',
+               controller: 'loginController',
                 templateUrl: 'app/views/login/login_dialog_box.directive.html'
                   //templateUrl: 'app/views/live-callC.html'
             })
@@ -117,7 +117,12 @@
  
  
 
- 
+//Add this to have access to a global variable
+    app.run(function ($rootScope) {
+        $rootScope.logintype = ''; //global variable
+        });
+
+
     app.directive('backAnimation', ['$browser', '$location', function($browser, $location) {
     	return {
     		link: function(scope, element) {

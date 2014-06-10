@@ -1,5 +1,8 @@
-	<!-- header of the page -->
-		<header id="header">
+
+
+
+<!-- header of the page -->
+		<header id="header" >
 			<div class="header-holder">
                 
 				<strong class="btn-back" ng-click="toggleAnimation()"><a href="#/{{link}}/">back</a></strong>
@@ -15,7 +18,7 @@
 							<a href="#" class="close">close</a>
 							<div class="nav-slide">
 								<a href="mailto:&#097;&#099;&#099;&#111;&#117;&#110;&#116;&#115;&#045;&#101;&#109;&#097;&#105;&#108;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" class="email">&#097;&#099;&#099;&#111;&#117;&#110;&#116;&#115;&#045;&#101;&#109;&#097;&#105;&#108;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a>
-								<ul>
+								<ul >
 									<li class="has-dropdown">
 										<a href="#">Choose a Sport</a>
 										<div class="submenu">
@@ -124,14 +127,16 @@
 											</ul>
 										</div>
 									</li>
-									<li><a href="#/messages/">My Messages (15)</a></li>
-									<li><a href="#">My Wait Lists (3)</a></li>
-                                    <li><a href="#/purchase-history/">Purchase History</a></li>
-                                    <li><a href="#/coachmessages/">Coach Messages</a></li>
+                                   
+                                    <li ng-if="logintype == 'player'"><a href="#/messages/">My Messages (15)</a></li>
+									<li ng-if="logintype == 'player'"><a href="#">My Wait Lists (3)</a></li>
+                                    <li ng-if="logintype == 'player'"><a href="#/purchase-history/">Purchase History</a></li>
+                                    <li ng-if="logintype == 'coach'"><a href="#/coachmessages/">Message History (15)</a></li>
+                                    <li ng-if="logintype == 'coach'"><a href="#/coachmessages/">Earnings History</a></li>
 									<li><a href="#">Account Settings</a></li>
 									<li><a href="#">Customer Support</a></li>
 									<li><a href="#">Terms &amp; Conditions</a></li>
-                                    <li><a href="#">Logout</a></li>
+                                    <li><a href="#/">Logout</a></li>
 								</ul>
 							</div>
 						</div>

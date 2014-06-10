@@ -387,8 +387,8 @@ background-image: url('../images/sign/cancel@2x.png');
 }
 /* footer styles */
 #footer {
-	position: fixed;
-	bottom: 0;
+	position: absolute;
+	bottom: 0.5%;
 	left: 0;
 	right: 0;
 	/*height: 40px;*/
@@ -2069,7 +2069,7 @@ background-image: url('../images/sign/cancel.png');
 		margin: 3px 3px 0 0;
 	}
 	.expert-in { padding: 0 0 0 19px; }
-	.expert-in li { margin: 0 0 0 15px; }
+	.expert-in li { margin: 0 0 0 5px; }
 	.live-chat .author { padding: 23px 23px 19px 16px; }
 	.live-chat.coachs .img-holder { margin: 0 9px 0 0; }
 	.coachs .author .text { padding: 2px 0; }
